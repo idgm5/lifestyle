@@ -12,6 +12,29 @@ class ArticlesController < ApplicationController
     end
   end
 
+  def vote
+    @vote = Vote.new(vote_params)
+
+    if @vote.save
+      flash[:notice] = 'You liked this article!'
+      redirect_to root_path
+    else
+      flash[:notice] = @vote.errors.full_messages
+      redirect_to root_path
+    end
+  end
+
+  def unvote
+    @vote = Vote.find_by(user_id: params[:user_id], article_id: params[:article_id])
+
+    if @vote.destroy
+      flash[:notice] = 'You disliked this article!'
+      redirect_to root_path
+    else
+      flash[:notice] = @vote.errors.full_messages
+      redirect_to root_path
+    end
+  end
   # GET /articles/1
   # GET /articles/1.json
   def show
@@ -77,5 +100,9 @@ class ArticlesController < ApplicationController
     # Only allow a list of trusted parameters through.
     def article_params
       params.require(:article).permit(:title, :text, :image)
+    end
+
+    def vote_params
+      params.permit(:user_id, :article_id)
     end
 end
