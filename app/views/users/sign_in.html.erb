@@ -1,0 +1,10 @@
+<h1>Login back to your account</h1>
+
+<%= form_with url: login_path  do |f| %>
+        <%= f.label 'Name of your account' %>
+        <%= f.text_field :name %>
+        <%= f.submit 'Login' %>
+
+<% end %>
+
+<p><%= link_to 'Back to home', root_path  %></p>

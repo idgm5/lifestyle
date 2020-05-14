@@ -21,6 +21,22 @@ class UsersController < ApplicationController
   def edit
   end
 
+  def sign_in
+    @user = User.new
+  end
+
+  def login
+    if User.find_by(name: params[:name])
+      @user = User.find_by(name: params[:name])
+      session[:current_user_id] = @user.id
+      flash[:notice] = "Welcome back #{@user.name}!"
+      redirect_to root_path
+    else
+      flash[:notice] = 'Register a new account here.'
+      redirect_to new_user_path
+    end
+  end
+
   # POST /users
   # POST /users.json
   def create
@@ -28,6 +44,7 @@ class UsersController < ApplicationController
 
     respond_to do |format|
       if @user.save
+        session[:current_user_id] = @user.id
         format.html { redirect_to @user, notice: 'User was successfully created.' }
         format.json { render :show, status: :created, location: @user }
       else
@@ -54,17 +71,19 @@ class UsersController < ApplicationController
   # DELETE /users/1
   # DELETE /users/1.json
   def destroy
-    @user.destroy
-    respond_to do |format|
-      format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
-      format.json { head :no_content }
-    end
+    session.delete(:current_user_id)
+    redirect_to root_path
+    # @user.destroy
+    # respond_to do |format|
+    #   format.html { redirect_to users_url, notice: 'User was successfully destroyed.' }
+    #   format.json { head :no_content }
+    # end
   end
 
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user
-      @user = User.find(params[:id])
+      @user = User.find(session[:current_user_id])
     end
 
     # Only allow a list of trusted parameters through.

@@ -1,4 +1,8 @@
 Rails.application.routes.draw do
+  get 'sign_in', action: :sign_in, controller: 'users'
+  post 'login', action: :login, controller: 'users'
+  delete 'log_out', action: :destroy, controller: 'users'
+
   resources :users
   resources :articles
 

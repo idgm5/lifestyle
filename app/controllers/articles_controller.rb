@@ -5,6 +5,11 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+    if session[:current_user_id].is_a? Integer
+       @user = User.find(session[:current_user_id])
+    else
+       @user = User.first
+    end
   end
 
   # GET /articles/1
