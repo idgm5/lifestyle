@@ -3,6 +3,11 @@
   <%= image_tag(@article.image) if @article.image.attached? %>
 
 <p>
+  <strong>Author:</strong>
+  <%= @article.author.name %>
+</p>
+
+<p>
   <strong>Title:</strong>
   <%= @article.title %>
 </p>

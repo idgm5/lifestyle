@@ -883,3 +883,216 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 5045)
 
 
+Started GET "/articles/1" for ::1 at 2020-05-14 11:58:06 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:73:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  Rendered articles/show.html.erb within layouts/application (Duration: 34.0ms | Allocations: 16429)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 41ms (Views: 36.7ms | ActiveRecord: 1.9ms | Allocations: 20681)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--62d235c768d2e7663d8c283f9f355d769f604ed7/515luINJ1ML._AC_SX425_.jpg" for ::1 at 2020-05-14 11:58:06 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--62d235c768d2e7663d8c283f9f355d769f604ed7", "filename"=>"515luINJ1ML._AC_SX425_"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 81nydl3krwszrvxs9klcnmfc6q9l (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNzowMzowNi41ODZaIiwicHVyIjoiYmxvYl9rZXkifX0=--ce4e07155837bf26f7b4599358b6876a52b2e61f/515luINJ1ML._AC_SX425_.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22515luINJ1ML._AC_SX425_.jpg%22%3B+filename%2A%3DUTF-8%27%27515luINJ1ML._AC_SX425_.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNzowMzowNi41ODZaIiwicHVyIjoiYmxvYl9rZXkifX0=--ce4e07155837bf26f7b4599358b6876a52b2e61f/515luINJ1ML._AC_SX425_.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22515luINJ1ML._AC_SX425_.jpg%22%3B+filename%2A%3DUTF-8%27%27515luINJ1ML._AC_SX425_.jpg
+Completed 302 Found in 3ms (ActiveRecord: 0.1ms | Allocations: 2171)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNzowMzowNi41ODZaIiwicHVyIjoiYmxvYl9rZXkifX0=--ce4e07155837bf26f7b4599358b6876a52b2e61f/515luINJ1ML._AC_SX425_.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22515luINJ1ML._AC_SX425_.jpg%22%3B+filename%2A%3DUTF-8%27%27515luINJ1ML._AC_SX425_.jpg" for ::1 at 2020-05-14 11:58:06 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"515luINJ1ML._AC_SX425_.jpg\"; filename*=UTF-8''515luINJ1ML._AC_SX425_.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNzowMzowNi41ODZaIiwicHVyIjoiYmxvYl9rZXkifX0=--ce4e07155837bf26f7b4599358b6876a52b2e61f", "filename"=>"515luINJ1ML._AC_SX425_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 495)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 11:58:12 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:21
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.3ms | Allocations: 836)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 7ms (Views: 5.3ms | ActiveRecord: 0.2ms | Allocations: 4899)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 12:00:59 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.9ms | Allocations: 1296)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1623)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 8.7ms | ActiveRecord: 0.5ms | Allocations: 9920)
+
+
+Started POST "/articles" for ::1 at 2020-05-14 12:01:26 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"I26Fo8nszKM5axAIH9m1ytzOmY7GC0odX3Z4Tz2ugXvTg3E8N8wRcoSMQ8K2/0svrjYTdIUu800OT0+0VNW3cg==", "article"=>{"title"=>"I love democracy", "text"=>"I love the republic!", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000563e30bc0ad8 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-16122-1j144h4.gif>, @original_filename="BelatedDeafeningFishingcat-max-1mb.gif", @content_type="image/gif", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"BelatedDeafeningFishingcat-max-1mb.gif\"\r\nContent-Type: image/gif\r\n">}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:32:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+  [1m[36mArticle Create (0.7ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id") VALUES (?, ?, ?, ?, ?)[0m  [["title", "I love democracy"], ["text", "I love the republic!"], ["created_at", "2020-05-14 17:01:26.536865"], ["updated_at", "2020-05-14 17:01:26.536865"], ["author_id", 2]]
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "40hkpmr46q5pcaetc1tco9ggvg4f"], ["filename", "BelatedDeafeningFishingcat-max-1mb.gif"], ["content_type", "image/gif"], ["metadata", "{\"identified\":true}"], ["byte_size", 807198], ["checksum", "TDeHVtfz7L7Mht01LYPxdA=="], ["created_at", "2020-05-14 17:01:26.573234"]]
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 2], ["blob_id", 2], ["created_at", "2020-05-14 17:01:26.574935"]]
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-14 17:01:26.576314"], ["id", 2]]
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+  [1m[35m (96.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:37:in `block in create'
+[36m  Disk Storage (8.5ms) [0m[32mUploaded file to key: 40hkpmr46q5pcaetc1tco9ggvg4f (checksum: TDeHVtfz7L7Mht01LYPxdA==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9942675b-10be-49e6-9137-22843a2503eb) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f2a9ca9dd50 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/2>>
+Redirected to http://localhost:3000/articles/2
+Completed 302 Found in 192ms (ActiveRecord: 105.1ms | Allocations: 50174)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9942675b-10be-49e6-9137-22843a2503eb] Performing ActiveStorage::AnalyzeJob (Job ID: 9942675b-10be-49e6-9137-22843a2503eb) from Async(active_storage_analysis) enqueued at 2020-05-14T17:01:26Z with arguments: #<GlobalID:0x00007f2a9c99f070 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/2>>
+Started GET "/articles/2" for ::1 at 2020-05-14 12:01:26 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9942675b-10be-49e6-9137-22843a2503eb] [36m  Disk Storage (1.5ms) [0m[34mDownloaded file from key: 40hkpmr46q5pcaetc1tco9ggvg4f[0m
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:74:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.2ms | Allocations: 2374)
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9942675b-10be-49e6-9137-22843a2503eb] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9942675b-10be-49e6-9137-22843a2503eb]   [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9942675b-10be-49e6-9137-22843a2503eb]   [1m[36mActiveStorage::Blob Update (0.2ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 2]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9942675b-10be-49e6-9137-22843a2503eb]   [1m[35m (68.9ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9942675b-10be-49e6-9137-22843a2503eb] Performed ActiveStorage::AnalyzeJob (Job ID: 9942675b-10be-49e6-9137-22843a2503eb) from Async(active_storage_analysis) in 93.47ms
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 96ms (Views: 93.5ms | ActiveRecord: 0.5ms | Allocations: 11840)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a65edf186a251abac93e7513b82c8e5f2e90c0c6/BelatedDeafeningFishingcat-max-1mb.gif" for ::1 at 2020-05-14 12:01:26 -0500
+Processing by ActiveStorage::BlobsController#show as GIF
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCdz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--a65edf186a251abac93e7513b82c8e5f2e90c0c6", "filename"=>"BelatedDeafeningFishingcat-max-1mb"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[36m  Disk Storage (0.6ms) [0m[34mGenerated URL for file at key: 40hkpmr46q5pcaetc1tco9ggvg4f (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOREJvYTNCdGNqUTJjVFZ3WTJGbGRHTXhkR052T1dkbmRtYzBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtKbGJHRjBaV1JFWldGbVpXNXBibWRHYVhOb2FXNW5ZMkYwTFcxaGVDMHhiV0l1WjJsbUlqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZENaV3hoZEdWa1JHVmhabVZ1YVc1blJtbHphR2x1WjJOaGRDMXRZWGd0TVcxaUxtZHBaZ1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMMmRwWmdZN0JsUT0iLCJleHAiOiIyMDIwLTA1LTE0VDE3OjA2OjI2Ljg4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--382f51cc616a044cbacc50387871e6e1e4d9499c/BelatedDeafeningFishingcat-max-1mb.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22BelatedDeafeningFishingcat-max-1mb.gif%22%3B+filename%2A%3DUTF-8%27%27BelatedDeafeningFishingcat-max-1mb.gif)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOREJvYTNCdGNqUTJjVFZ3WTJGbGRHTXhkR052T1dkbmRtYzBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtKbGJHRjBaV1JFWldGbVpXNXBibWRHYVhOb2FXNW5ZMkYwTFcxaGVDMHhiV0l1WjJsbUlqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZENaV3hoZEdWa1JHVmhabVZ1YVc1blJtbHphR2x1WjJOaGRDMXRZWGd0TVcxaUxtZHBaZ1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMMmRwWmdZN0JsUT0iLCJleHAiOiIyMDIwLTA1LTE0VDE3OjA2OjI2Ljg4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--382f51cc616a044cbacc50387871e6e1e4d9499c/BelatedDeafeningFishingcat-max-1mb.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22BelatedDeafeningFishingcat-max-1mb.gif%22%3B+filename%2A%3DUTF-8%27%27BelatedDeafeningFishingcat-max-1mb.gif
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2169)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOREJvYTNCdGNqUTJjVFZ3WTJGbGRHTXhkR052T1dkbmRtYzBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtKbGJHRjBaV1JFWldGbVpXNXBibWRHYVhOb2FXNW5ZMkYwTFcxaGVDMHhiV0l1WjJsbUlqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZENaV3hoZEdWa1JHVmhabVZ1YVc1blJtbHphR2x1WjJOaGRDMXRZWGd0TVcxaUxtZHBaZ1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMMmRwWmdZN0JsUT0iLCJleHAiOiIyMDIwLTA1LTE0VDE3OjA2OjI2Ljg4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--382f51cc616a044cbacc50387871e6e1e4d9499c/BelatedDeafeningFishingcat-max-1mb.gif?content_type=image%2Fgif&disposition=inline%3B+filename%3D%22BelatedDeafeningFishingcat-max-1mb.gif%22%3B+filename%2A%3DUTF-8%27%27BelatedDeafeningFishingcat-max-1mb.gif" for ::1 at 2020-05-14 12:01:27 -0500
+Processing by ActiveStorage::DiskController#show as GIF
+  Parameters: {"content_type"=>"image/gif", "disposition"=>"inline; filename=\"BelatedDeafeningFishingcat-max-1mb.gif\"; filename*=UTF-8''BelatedDeafeningFishingcat-max-1mb.gif", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhOREJvYTNCdGNqUTJjVFZ3WTJGbGRHTXhkR052T1dkbmRtYzBaZ1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWtKbGJHRjBaV1JFWldGbVpXNXBibWRHYVhOb2FXNW5ZMkYwTFcxaGVDMHhiV0l1WjJsbUlqc2dabWxzWlc1aGJXVXFQVlZVUmkwNEp5ZENaV3hoZEdWa1JHVmhabVZ1YVc1blJtbHphR2x1WjJOaGRDMXRZWGd0TVcxaUxtZHBaZ1k3QmxRNkVXTnZiblJsYm5SZmRIbHdaVWtpRG1sdFlXZGxMMmRwWmdZN0JsUT0iLCJleHAiOiIyMDIwLTA1LTE0VDE3OjA2OjI2Ljg4OFoiLCJwdXIiOiJibG9iX2tleSJ9fQ==--382f51cc616a044cbacc50387871e6e1e4d9499c", "filename"=>"BelatedDeafeningFishingcat-max-1mb"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 496)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 12:01:33 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:21
+  Rendered articles/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1030)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 15.2ms | ActiveRecord: 0.4ms | Allocations: 5104)
+
+
+Started GET "/articles/2" for ::1 at 2020-05-14 12:02:12 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:74:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.5ms | Allocations: 2986)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 16.3ms | ActiveRecord: 0.5ms | Allocations: 7963)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 12:02:18 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:21
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1309)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 5.7ms | ActiveRecord: 0.3ms | Allocations: 5525)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-14 12:02:20 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:74:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.6ms | Allocations: 2782)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.1ms | ActiveRecord: 0.5ms | Allocations: 6851)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNzowMzowNi41ODZaIiwicHVyIjoiYmxvYl9rZXkifX0=--ce4e07155837bf26f7b4599358b6876a52b2e61f/515luINJ1ML._AC_SX425_.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22515luINJ1ML._AC_SX425_.jpg%22%3B+filename%2A%3DUTF-8%27%27515luINJ1ML._AC_SX425_.jpg" for ::1 at 2020-05-14 12:02:20 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"515luINJ1ML._AC_SX425_.jpg\"; filename*=UTF-8''515luINJ1ML._AC_SX425_.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNzowMzowNi41ODZaIiwicHVyIjoiYmxvYl9rZXkifX0=--ce4e07155837bf26f7b4599358b6876a52b2e61f", "filename"=>"515luINJ1ML._AC_SX425_"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 436)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 12:02:21 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:21
+  Rendered articles/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 957)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.1ms | ActiveRecord: 0.2ms | Allocations: 5024)
+
+
+Started GET "/articles/2" for ::1 at 2020-05-14 12:02:22 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mArticle Load (0.9ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:74:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 2], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  Rendered articles/show.html.erb within layouts/application (Duration: 9.6ms | Allocations: 2774)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 19.5ms | ActiveRecord: 1.2ms | Allocations: 6853)
+
+

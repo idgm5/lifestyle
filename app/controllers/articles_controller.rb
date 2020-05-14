@@ -29,7 +29,8 @@ class ArticlesController < ApplicationController
   # POST /articles
   # POST /articles.json
   def create
-    @article = Article.new(article_params)
+    current_user = User.find(session[:current_user_id])
+    @article = current_user.articles.build(article_params)
     @article.image.attach(params[:article][:image])
 
     respond_to do |format|
