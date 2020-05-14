@@ -2000,3 +2000,474 @@ Processing by ArticlesController#new as HTML
 Completed 200 OK in 210ms (Views: 209.7ms | ActiveRecord: 0.0ms | Allocations: 8080)
 
 
+Started GET "/articles/new" for ::1 at 2020-05-14 14:59:28 -0500
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:32
+  Rendered articles/_form.html.erb (Duration: 43.5ms | Allocations: 8501)
+  Rendered articles/new.html.erb within layouts/application (Duration: 44.6ms | Allocations: 9088)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 69ms (Views: 52.7ms | ActiveRecord: 0.9ms | Allocations: 24529)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:00:18 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 2.8ms | Allocations: 2181)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2507)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 6980)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" ORDER BY "categories"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/articles/new" for ::1 at 2020-05-14 15:02:50 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 3.4ms | Allocations: 2156)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.2ms | Allocations: 2481)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 9.1ms | ActiveRecord: 0.1ms | Allocations: 6948)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:02:58 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 6.7ms | Allocations: 1781)
+  Rendered articles/new.html.erb within layouts/application (Duration: 7.2ms | Allocations: 1864)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 16.4ms | ActiveRecord: 0.2ms | Allocations: 5410)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:05:10 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 2.7ms | Allocations: 2162)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2487)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 6946)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:05:29 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 7.7ms | Allocations: 2165)
+  Rendered articles/new.html.erb within layouts/application (Duration: 9.4ms | Allocations: 2490)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.8ms | ActiveRecord: 0.2ms | Allocations: 6958)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:05:44 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 6.3ms | Allocations: 1569)
+  Rendered articles/new.html.erb within layouts/application (Duration: 8.2ms | Allocations: 1899)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 20ms (Views: 17.7ms | ActiveRecord: 0.0ms | Allocations: 6382)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:06:51 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/articles_controller.rb:47:in `new'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.8ms | Allocations: 2192)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.5ms | Allocations: 2518)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 23ms (Views: 8.3ms | ActiveRecord: 1.1ms | Allocations: 16440)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:06:56 -0500
+Processing by ArticlesController#new as HTML
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/controllers/articles_controller.rb:47:in `new'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 4.6ms | Allocations: 1122)
+  Rendered articles/new.html.erb within layouts/application (Duration: 5.2ms | Allocations: 1206)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 19ms (Views: 15.3ms | ActiveRecord: 0.2ms | Allocations: 5350)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:11:24 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31:in `map'
+  Rendered articles/_form.html.erb (Duration: 12.6ms | Allocations: 5543)
+  Rendered articles/new.html.erb within layouts/application (Duration: 13.4ms | Allocations: 5870)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 17.1ms | ActiveRecord: 1.2ms | Allocations: 16525)
+
+
+Started POST "/articles" for ::1 at 2020-05-14 15:12:00 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Grw3ETP66rg7fiCiHpY94vj2C0Cc/maqg1kyvkgtnF0Yh9NXWi+HjdXHMFzuLtDp5afNrDC+rYWOZVbPrY2NFA==", "article"=>{"title"=>"Harley Davidson", "text"=>"A nice motorbike!", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007efe7802d488 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-4461-1uy058v.jpg>, @original_filename="harley-davidson-kSNQz1lTBPQ-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">, "category"=>"Miscellaneous"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+[31mUnpermitted parameter: :category[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.7ms | Allocations: 2721)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.0ms | Allocations: 2784)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 1.6ms | Allocations: 11940)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category, options_for_select(@categories.map{ |category| category.name }), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:65:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:60:in `create'
+Started POST "/articles" for ::1 at 2020-05-14 15:13:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Grw3ETP66rg7fiCiHpY94vj2C0Cc/maqg1kyvkgtnF0Yh9NXWi+HjdXHMFzuLtDp5afNrDC+rYWOZVbPrY2NFA==", "article"=>{"title"=>"Harley Davidson", "text"=>"A nice motorbike!", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055c8a3d6b020 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-4461-1fx3gis.jpg>, @original_filename="harley-davidson-kSNQz1lTBPQ-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">, "category"=>"Miscellaneous"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.3ms | Allocations: 11843)
+
+
+  
+ActiveRecord::AssociationTypeMismatch (Category(#46100) expected, got "Miscellaneous" which is an instance of String(#4460)):
+  
+app/controllers/articles_controller.rb:57:in `create'
+Started POST "/articles" for ::1 at 2020-05-14 15:14:47 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Grw3ETP66rg7fiCiHpY94vj2C0Cc/maqg1kyvkgtnF0Yh9NXWi+HjdXHMFzuLtDp5afNrDC+rYWOZVbPrY2NFA==", "article"=>{"title"=>"Harley Davidson", "text"=>"A nice motorbike!", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007efe9402e290 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-4461-2ter5x.jpg>, @original_filename="harley-davidson-kSNQz1lTBPQ-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">, "category"=>"Miscellaneous"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+[31mUnpermitted parameter: :category[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.9ms | Allocations: 2814)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.1ms | Allocations: 3120)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.9ms | Allocations: 18151)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_for_select(@categories.map{ |category| category.name }), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:65:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:60:in `create'
+Started POST "/articles" for ::1 at 2020-05-14 15:16:48 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Grw3ETP66rg7fiCiHpY94vj2C0Cc/maqg1kyvkgtnF0Yh9NXWi+HjdXHMFzuLtDp5afNrDC+rYWOZVbPrY2NFA==", "article"=>{"title"=>"Harley Davidson", "text"=>"A nice motorbike!", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007efe941a5c18 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-4461-9fc70j.jpg>, @original_filename="harley-davidson-kSNQz1lTBPQ-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">, "category"=>"Miscellaneous"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+[31mUnpermitted parameter: :category[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.9ms | Allocations: 2279)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.8ms | Allocations: 2587)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.1ms | Allocations: 6518)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 2, expected 3..4)):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories, :name), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:65:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:60:in `create'
+Started POST "/articles" for ::1 at 2020-05-14 15:18:43 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Grw3ETP66rg7fiCiHpY94vj2C0Cc/maqg1kyvkgtnF0Yh9NXWi+HjdXHMFzuLtDp5afNrDC+rYWOZVbPrY2NFA==", "article"=>{"title"=>"Harley Davidson", "text"=>"A nice motorbike!", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055c8a4c57e58 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-4461-1kz74ci.jpg>, @original_filename="harley-davidson-kSNQz1lTBPQ-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">, "category"=>"Miscellaneous"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+[31mUnpermitted parameter: :category[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.8ms | Allocations: 2802)
+  Rendered articles/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 3108)
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.2ms | Allocations: 7037)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories, :id, :name), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:65:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:60:in `create'
+Started POST "/articles" for ::1 at 2020-05-14 15:19:12 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"Grw3ETP66rg7fiCiHpY94vj2C0Cc/maqg1kyvkgtnF0Yh9NXWi+HjdXHMFzuLtDp5afNrDC+rYWOZVbPrY2NFA==", "article"=>{"title"=>"Harley Davidson", "text"=>"A nice motorbike!", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055c8a3df8880 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-4461-snpywx.jpg>, @original_filename="harley-davidson-kSNQz1lTBPQ-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">, "category"=>"Miscellaneous"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+[31mUnpermitted parameter: :category[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.5ms | Allocations: 2278)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 2586)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.2ms | Allocations: 6512)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 3..4)):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:65:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:60:in `create'
+Started GET "/articles/new" for ::1 at 2020-05-14 15:21:06 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:30
+  Rendered articles/_form.html.erb (Duration: 14.5ms | Allocations: 4725)
+  Rendered articles/new.html.erb within layouts/application (Duration: 15.7ms | Allocations: 5051)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 26ms (Views: 21.8ms | ActiveRecord: 1.3ms | Allocations: 9580)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:21:49 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.8ms | Allocations: 2206)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 2511)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms | Allocations: 3795)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 3..4)):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+Started GET "/articles/new" for ::1 at 2020-05-14 15:21:56 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.6ms | Allocations: 1828)
+  Rendered articles/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1891)
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms | Allocations: 2447)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 1, expected 3..4)):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+Started GET "/articles/new" for ::1 at 2020-05-14 15:22:17 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 9.3ms | Allocations: 2174)
+  Rendered articles/new.html.erb within layouts/application (Duration: 11.5ms | Allocations: 2500)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 22.4ms | ActiveRecord: 0.3ms | Allocations: 6987)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 15:22:20 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  Rendered articles/index.html.erb within layouts/application (Duration: 23.6ms | Allocations: 13060)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 29ms (Views: 26.3ms | ActiveRecord: 1.5ms | Allocations: 17174)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 15:22:21 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 4.9ms | Allocations: 1797)
+  Rendered articles/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1879)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms | Allocations: 5449)
+
+
+Started POST "/articles" for ::1 at 2020-05-14 15:22:37 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"mJnyub5qUB3s+YhhbG2YzHScny7W3fxIATyICQiFl09odAYmQEqNzFEe26vFS2YpBmQV1JX4RRhQBb/yYf6hRg==", "article"=>{"title"=>"Harley Davidson", "text"=>"A nice motorbike", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007efea04e2140 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-4461-1f1a6iu.jpg>, @original_filename="harley-davidson-kSNQz1lTBPQ-unsplash.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"\r\nContent-Type: image/jpeg\r\n">, "category_id"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mArticle Create (405.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Harley Davidson"], ["text", "A nice motorbike"], ["created_at", "2020-05-14 20:22:37.026364"], ["updated_at", "2020-05-14 20:22:37.026364"], ["author_id", 2], ["category_id", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mActiveStorage::Blob Create (15.7ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "h7bj6h2vnyb2nzqs58b6a3oqq897"], ["filename", "harley-davidson-kSNQz1lTBPQ-unsplash.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 41848], ["checksum", "U781wdk0D722EyEXPBBWkg=="], ["created_at", "2020-05-14 20:22:37.635950"]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mActiveStorage::Attachment Create (0.4ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 3], ["blob_id", 3], ["created_at", "2020-05-14 20:22:37.657767"]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mArticle Update (0.2ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-14 20:22:37.663320"], ["id", 3]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[35m (64.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+[36m  Disk Storage (7.3ms) [0m[32mUploaded file to key: h7bj6h2vnyb2nzqs58b6a3oqq897 (checksum: U781wdk0D722EyEXPBBWkg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: e599115f-3201-4da7-9f72-b02ca835e7c3) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007efea08a1768 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/3>>
+Redirected to http://localhost:3000/articles/3
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Completed 302 Found in 894ms (ActiveRecord: 488.1ms | Allocations: 50908)
+
+
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e599115f-3201-4da7-9f72-b02ca835e7c3] Performing ActiveStorage::AnalyzeJob (Job ID: e599115f-3201-4da7-9f72-b02ca835e7c3) from Async(active_storage_analysis) enqueued at 2020-05-14T20:22:37Z with arguments: #<GlobalID:0x00007efea0a8cb40 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/3>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e599115f-3201-4da7-9f72-b02ca835e7c3] [36m  Disk Storage (0.5ms) [0m[34mDownloaded file from key: h7bj6h2vnyb2nzqs58b6a3oqq897[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e599115f-3201-4da7-9f72-b02ca835e7c3] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e599115f-3201-4da7-9f72-b02ca835e7c3]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e599115f-3201-4da7-9f72-b02ca835e7c3]   [1m[36mActiveStorage::Blob Update (0.4ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 3]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e599115f-3201-4da7-9f72-b02ca835e7c3]   [1m[35m (103.9ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/articles/3" for ::1 at 2020-05-14 15:22:38 -0500
+[ActiveJob] [ActiveStorage::AnalyzeJob] [e599115f-3201-4da7-9f72-b02ca835e7c3] Performed ActiveStorage::AnalyzeJob (Job ID: e599115f-3201-4da7-9f72-b02ca835e7c3) from Async(active_storage_analysis) in 139.43ms
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:98:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.5ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  Rendered articles/show.html.erb within layouts/application (Duration: 18.9ms | Allocations: 3319)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 43ms (Views: 33.1ms | ActiveRecord: 1.2ms | Allocations: 7676)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f085c2a59245822b20849d4edb36a7ca8f54b62/harley-davidson-kSNQz1lTBPQ-unsplash.jpg" for ::1 at 2020-05-14 15:22:38 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBDQT09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--7f085c2a59245822b20849d4edb36a7ca8f54b62", "filename"=>"harley-davidson-kSNQz1lTBPQ-unsplash"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[36m  Disk Storage (0.9ms) [0m[34mGenerated URL for file at key: h7bj6h2vnyb2nzqs58b6a3oqq897 (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhRGRpYWpab01uWnVlV0l5Ym5weGN6VTRZalpoTTI5eGNUZzVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGNteGxlUzFrWVhacFpITnZiaTFyVTA1UmVqRnNWRUpRVVMxMWJuTndiR0Z6YUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmhoY214bGVTMWtZWFpwWkhOdmJpMXJVMDVSZWpGc1ZFSlFVUzExYm5Od2JHRnphQzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjAtMDUtMTRUMjA6Mjc6MzguMTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--828a9fe9af522cf99d0a69c2948d9a05af847385/harley-davidson-kSNQz1lTBPQ-unsplash.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22harley-davidson-kSNQz1lTBPQ-unsplash.jpg%22%3B+filename%2A%3DUTF-8%27%27harley-davidson-kSNQz1lTBPQ-unsplash.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhRGRpYWpab01uWnVlV0l5Ym5weGN6VTRZalpoTTI5eGNUZzVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGNteGxlUzFrWVhacFpITnZiaTFyVTA1UmVqRnNWRUpRVVMxMWJuTndiR0Z6YUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmhoY214bGVTMWtZWFpwWkhOdmJpMXJVMDVSZWpGc1ZFSlFVUzExYm5Od2JHRnphQzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjAtMDUtMTRUMjA6Mjc6MzguMTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--828a9fe9af522cf99d0a69c2948d9a05af847385/harley-davidson-kSNQz1lTBPQ-unsplash.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22harley-davidson-kSNQz1lTBPQ-unsplash.jpg%22%3B+filename%2A%3DUTF-8%27%27harley-davidson-kSNQz1lTBPQ-unsplash.jpg
+Completed 302 Found in 4ms (ActiveRecord: 0.1ms | Allocations: 2351)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhRGRpYWpab01uWnVlV0l5Ym5weGN6VTRZalpoTTI5eGNUZzVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGNteGxlUzFrWVhacFpITnZiaTFyVTA1UmVqRnNWRUpRVVMxMWJuTndiR0Z6YUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmhoY214bGVTMWtZWFpwWkhOdmJpMXJVMDVSZWpGc1ZFSlFVUzExYm5Od2JHRnphQzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjAtMDUtMTRUMjA6Mjc6MzguMTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--828a9fe9af522cf99d0a69c2948d9a05af847385/harley-davidson-kSNQz1lTBPQ-unsplash.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22harley-davidson-kSNQz1lTBPQ-unsplash.jpg%22%3B+filename%2A%3DUTF-8%27%27harley-davidson-kSNQz1lTBPQ-unsplash.jpg" for ::1 at 2020-05-14 15:22:38 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"; filename*=UTF-8''harley-davidson-kSNQz1lTBPQ-unsplash.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhRGRpYWpab01uWnVlV0l5Ym5weGN6VTRZalpoTTI5eGNUZzVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGNteGxlUzFrWVhacFpITnZiaTFyVTA1UmVqRnNWRUpRVVMxMWJuTndiR0Z6YUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmhoY214bGVTMWtZWFpwWkhOdmJpMXJVMDVSZWpGc1ZFSlFVUzExYm5Od2JHRnphQzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjAtMDUtMTRUMjA6Mjc6MzguMTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--828a9fe9af522cf99d0a69c2948d9a05af847385", "filename"=>"harley-davidson-kSNQz1lTBPQ-unsplash"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 488)
+
+
+Started GET "/articles/3" for ::1 at 2020-05-14 15:23:19 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:98:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.3ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 3], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.2ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:22
+  Rendered articles/show.html.erb within layouts/application (Duration: 13.8ms | Allocations: 3744)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 21.9ms | ActiveRecord: 1.1ms | Allocations: 8724)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhRGRpYWpab01uWnVlV0l5Ym5weGN6VTRZalpoTTI5eGNUZzVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGNteGxlUzFrWVhacFpITnZiaTFyVTA1UmVqRnNWRUpRVVMxMWJuTndiR0Z6YUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmhoY214bGVTMWtZWFpwWkhOdmJpMXJVMDVSZWpGc1ZFSlFVUzExYm5Od2JHRnphQzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjAtMDUtMTRUMjA6Mjc6MzguMTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--828a9fe9af522cf99d0a69c2948d9a05af847385/harley-davidson-kSNQz1lTBPQ-unsplash.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22harley-davidson-kSNQz1lTBPQ-unsplash.jpg%22%3B+filename%2A%3DUTF-8%27%27harley-davidson-kSNQz1lTBPQ-unsplash.jpg" for ::1 at 2020-05-14 15:23:19 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"harley-davidson-kSNQz1lTBPQ-unsplash.jpg\"; filename*=UTF-8''harley-davidson-kSNQz1lTBPQ-unsplash.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhhRGRpYWpab01uWnVlV0l5Ym5weGN6VTRZalpoTTI5eGNUZzVOd1k2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpZTJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SW1oaGNteGxlUzFrWVhacFpITnZiaTFyVTA1UmVqRnNWRUpRVVMxMWJuTndiR0Z6YUM1cWNHY2lPeUJtYVd4bGJtRnRaU285VlZSR0xUZ25KMmhoY214bGVTMWtZWFpwWkhOdmJpMXJVMDVSZWpGc1ZFSlFVUzExYm5Od2JHRnphQzVxY0djR093WlVPaEZqYjI1MFpXNTBYM1I1Y0dWSklnOXBiV0ZuWlM5cWNHVm5CanNHVkE9PSIsImV4cCI6IjIwMjAtMDUtMTRUMjA6Mjc6MzguMTU0WiIsInB1ciI6ImJsb2Jfa2V5In19--828a9fe9af522cf99d0a69c2948d9a05af847385", "filename"=>"harley-davidson-kSNQz1lTBPQ-unsplash"}
+Completed 304 Not Modified in 1ms (ActiveRecord: 0.0ms | Allocations: 436)
+
+
