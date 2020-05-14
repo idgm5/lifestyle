@@ -2591,3 +2591,465 @@ Processing by ArticlesController#index as HTML
 Completed 200 OK in 26ms (Views: 22.7ms | ActiveRecord: 1.2ms | Allocations: 12097)
 
 
+Started GET "/articles/new" for ::1 at 2020-05-14 16:56:08 -0500
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 117.4ms | Allocations: 186794)
+  Rendered articles/new.html.erb within layouts/application (Duration: 118.4ms | Allocations: 187247)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 143ms (Views: 126.5ms | ActiveRecord: 1.1ms | Allocations: 202663)
+
+
+Started POST "/articles" for ::1 at 2020-05-14 16:56:10 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"vCwb7pGmRv9c1gI1r/CqDYWDa2ctz3ACfnJAy2pYQG1Mwe9xb4abLuExUf8G1lTo93vhnW7qyVIvS3cwAyN2ZA==", "article"=>{"title"=>"", "text"=>"", "category_id"=>""}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.8ms | Allocations: 3108)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.0ms | Allocations: 3172)
+Completed 500 Internal Server Error in 38ms (ActiveRecord: 0.7ms | Allocations: 14581)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories, :id, :name, :priority), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:65:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:60:in `create'
+Started POST "/articles" for ::1 at 2020-05-14 16:56:18 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"b1jiljg4exbZ04Ft2vdPn+tIQOkAmdx81Sqnx80EiNRtYwbQUe0WIzdqkZMqT6KU9hmGBazZF1PYFsO2KKSZnQ==", "article"=>{"title"=>"", "text"=>"", "category_id"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.3ms | Allocations: 2562)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.5ms | Allocations: 2626)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.4ms | Allocations: 8918)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories, :id, :name, :priority), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:65:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:60:in `create'
+Started POST "/articles" for ::1 at 2020-05-14 16:56:46 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"b1jiljg4exbZ04Ft2vdPn+tIQOkAmdx81Sqnx80EiNRtYwbQUe0WIzdqkZMqT6KU9hmGBazZF1PYFsO2KKSZnQ==", "article"=>{"title"=>"Testing", "text"=>"Test", "category_id"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:56:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mArticle Create (0.9ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Testing"], ["text", "Test"], ["created_at", "2020-05-14 21:56:46.613753"], ["updated_at", "2020-05-14 21:56:46.613753"], ["author_id", 2], ["category_id", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+  [1m[35m (95.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:61:in `block in create'
+Redirected to http://localhost:3000/articles/4
+Completed 302 Found in 125ms (ActiveRecord: 96.8ms | Allocations: 12342)
+
+
+Started GET "/articles/4" for ::1 at 2020-05-14 16:56:46 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:98:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:22
+  Rendered articles/show.html.erb within layouts/application (Duration: 12.8ms | Allocations: 2737)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 31ms (Views: 24.5ms | ActiveRecord: 1.1ms | Allocations: 7126)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-05-14 16:56:53 -0500
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:98:in `set_article'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.9ms | Allocations: 2374)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 46.8ms | Allocations: 2562)
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 0.1ms | Allocations: 3762)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories, :id, :name, :priority), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/edit.html.erb:3
+Started GET "/articles/4" for ::1 at 2020-05-14 16:56:56 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:98:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:22
+  Rendered articles/show.html.erb within layouts/application (Duration: 4.4ms | Allocations: 2511)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 0.4ms | Allocations: 6601)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 16:57:05 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  Rendered articles/index.html.erb within layouts/application (Duration: 23.3ms | Allocations: 15585)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 30ms (Views: 26.2ms | ActiveRecord: 1.7ms | Allocations: 19693)
+
+
+Started GET "/articles/4" for ::1 at 2020-05-14 16:57:08 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:98:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:22
+  Rendered articles/show.html.erb within layouts/application (Duration: 10.1ms | Allocations: 2510)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 14.2ms | ActiveRecord: 0.5ms | Allocations: 6612)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-05-14 16:57:10 -0500
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:98:in `set_article'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.7ms | Allocations: 2371)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 1.9ms | Allocations: 2434)
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.1ms | Allocations: 3485)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories, :id, :name, :priority), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/edit.html.erb:3
+Started GET "/articles/4" for ::1 at 2020-05-14 16:58:26 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:100:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:7
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:22
+  Rendered articles/show.html.erb within layouts/application (Duration: 15.9ms | Allocations: 11385)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 34ms (Views: 19.0ms | ActiveRecord: 2.0ms | Allocations: 22196)
+
+
+Started GET "/articles/4/edit" for ::1 at 2020-05-14 16:58:29 -0500
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:100:in `set_article'
+  Rendering articles/edit.html.erb within layouts/application
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 4.0ms | Allocations: 1905)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 4.5ms | Allocations: 2018)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 13ms (Views: 10.3ms | ActiveRecord: 0.4ms | Allocations: 6105)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 16:58:33 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.3ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 4]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 4], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  Rendered articles/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 14880)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 24.0ms | ActiveRecord: 1.9ms | Allocations: 18960)
+
+
+Started DELETE "/articles/4" for ::1 at 2020-05-14 16:58:36 -0500
+Processing by ArticlesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"wla2MSxec0N/nzP0Ruu7rXamyFG4M/dCyLKR+RdyalnAbVJ3RYsedpEmIwq2U1ama/cOvRRzPG3FjvWI8tJ7EA==", "id"=>"4"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:100:in `set_article'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:90:in `destroy'
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 4], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:90:in `destroy'
+  [1m[36mArticle Destroy (0.7ms)[0m  [1m[31mDELETE FROM "articles" WHERE "articles"."id" = ?[0m  [["id", 4]]
+  ↳ app/controllers/articles_controller.rb:90:in `destroy'
+  [1m[35m (69.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:90:in `destroy'
+Redirected to http://localhost:3000/articles
+Completed 302 Found in 81ms (ActiveRecord: 70.1ms | Allocations: 5253)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 16:58:36 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:9:in `index'
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:23
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 1]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 1], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 2]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.2ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 2], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:27
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes" WHERE "votes"."article_id" = ?[0m  [["article_id", 3]]
+  ↳ app/views/articles/index.html.erb:28
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."article_id" = ? AND "votes"."user_id" = ? LIMIT ?[0m  [["article_id", 3], ["user_id", 2], ["LIMIT", 1]]
+  ↳ app/views/articles/index.html.erb:30
+  Rendered articles/index.html.erb within layouts/application (Duration: 33.3ms | Allocations: 8188)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 44ms (Views: 38.4ms | ActiveRecord: 2.5ms | Allocations: 12270)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 16:58:38 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 3.0ms | Allocations: 1794)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1876)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms | Allocations: 5427)
+
+
+Started POST "/articles" for ::1 at 2020-05-14 16:58:41 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"mmLmA0zEva9tny8e+djCIcQmviTdX7meX7A+8UrbbEZqjxKcsuRgftB4fNRQ/jzEtt403p56AM4OiQkKI6BaTw==", "article"=>{"title"=>"", "text"=>"", "category_id"=>""}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:58:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:63:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 3.2ms | Allocations: 2806)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 2869)
+Completed 500 Internal Server Error in 13ms (ActiveRecord: 0.2ms | Allocations: 7305)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories, :id, :name, :priority), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:67:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:62:in `create'
+Started POST "/articles" for ::1 at 2020-05-14 16:58:57 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"6y+l6JxZ99amdN1BKr2xUOzJQCbN9GhW3UlUIEttWnDpFEGu9Yya40jNzb/aBVxb8ZiGymG0o3nQdTBRrs1LOQ==", "article"=>{"title"=>"", "text"=>"", "category_id"=>""}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:59:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:64:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 2.2ms | Allocations: 2814)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.4ms | Allocations: 2877)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 1.0ms | Allocations: 18484)
+
+
+  
+ActionView::Template::Error (undefined method `map' for nil:NilClass):
+    28: 
+    29:   <div class="field">
+    30:     <%= form.label 'Select a category:' %>
+    31:     <%= form.select(:category_id, options_from_collection_for_select(@categories, :id, :name, :priority), prompt: true) %>
+    32:   </div>
+    33: 
+    34:   <div class="actions">
+  
+app/views/articles/_form.html.erb:31
+app/views/articles/_form.html.erb:1
+app/views/articles/new.html.erb:3
+app/controllers/articles_controller.rb:68:in `block (2 levels) in create'
+app/controllers/articles_controller.rb:63:in `create'
+Started GET "/articles/new" for ::1 at 2020-05-14 17:00:28 -0500
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 8.7ms | Allocations: 5536)
+  Rendered articles/new.html.erb within layouts/application (Duration: 9.9ms | Allocations: 5865)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 27ms (Views: 13.6ms | ActiveRecord: 1.6ms | Allocations: 16142)
+
+
+Started POST "/articles" for ::1 at 2020-05-14 17:00:31 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"hB5D/v2xt5MkuM9KBjvJP24JL2vw/s12G9jDsYzdzr6GJae4lGTapsoB37T2gyQ0c1jph1y+BlkW5KfAaX3f9w==", "article"=>{"title"=>"", "text"=>"", "category_id"=>""}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:55:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:60:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 3.4ms | Allocations: 2337)
+  Rendered articles/new.html.erb within layouts/application (Duration: 3.6ms | Allocations: 2420)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 24ms (Views: 6.8ms | ActiveRecord: 1.0ms | Allocations: 14321)
+
+
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" LIMIT ?[0m  [["LIMIT", 11]]
+  [1m[36mArticle Load (0.5ms)[0m  [1m[34mSELECT "articles".* FROM "articles" ORDER BY "articles"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+Started POST "/articles" for ::1 at 2020-05-14 17:04:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"hB5D/v2xt5MkuM9KBjvJP24JL2vw/s12G9jDsYzdzr6GJae4lGTapsoB37T2gyQ0c1jph1y+BlkW5KfAaX3f9w==", "article"=>{"title"=>"", "text"=>"", "category_id"=>""}, "commit"=>"Create Article"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:55:in `create'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:60:in `block in create'
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/articles/_form.html.erb:31
+  Rendered articles/_form.html.erb (Duration: 7.2ms | Allocations: 5179)
+  Rendered articles/new.html.erb within layouts/application (Duration: 7.4ms | Allocations: 5262)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 33ms (Views: 10.5ms | ActiveRecord: 1.5ms | Allocations: 24133)
+
+
