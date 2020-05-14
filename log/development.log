@@ -1,0 +1,263 @@
+  [1m[35m (45.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (223.3ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (192.6ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateArticles (20200514153957)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.8ms)[0m  [1m[35mCREATE TABLE "articles" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "text" text, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200514153957"]]
+  [1m[35m (140.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-05-14 15:40:47.160660"], ["updated_at", "2020-05-14 15:40:47.160660"]]
+  [1m[35m (480.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2020-05-14 10:42:01 -0500
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 11.7ms | Allocations: 1549)
+[Webpacker] Compiling...
+[Webpacker] Compiled all packs in /home/isaac/Microverse/lifestyle/public/packs
+[Webpacker] Hash: 15d1bb7b54cf6326b9ba
+Version: webpack 4.43.0
+Time: 3818ms
+Built at: 05/14/2020 10:42:08 AM
+                                     Asset       Size       Chunks                         Chunk Names
+    js/application-9afcbb5693aa87623e69.js    124 KiB  application  [emitted] [immutable]  application
+js/application-9afcbb5693aa87623e69.js.map    139 KiB  application  [emitted] [dev]        application
+                             manifest.json  364 bytes               [emitted]              
+Entrypoint application = js/application-9afcbb5693aa87623e69.js js/application-9afcbb5693aa87623e69.js.map
+[./app/javascript/channels sync recursive _channel\.js$] ./app/javascript/channels sync _channel\.js$ 160 bytes {application} [built]
+[./app/javascript/channels/index.js] 211 bytes {application} [built]
+[./app/javascript/packs/application.js] 749 bytes {application} [built]
+[./node_modules/webpack/buildin/module.js] (webpack)/buildin/module.js 552 bytes {application} [built]
+    + 3 hidden modules
+
+Completed 200 OK in 7839ms (Views: 7761.2ms | ActiveRecord: 0.9ms | Allocations: 23628)
+
+
+Started GET "/articles/new" for ::1 at 2020-05-14 10:42:14 -0500
+Processing by ArticlesController#new as HTML
+  Rendering articles/new.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 202.1ms | Allocations: 4353)
+  Rendered articles/new.html.erb within layouts/application (Duration: 211.4ms | Allocations: 4688)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 233ms (Views: 221.2ms | ActiveRecord: 0.6ms | Allocations: 10969)
+
+
+Started POST "/articles" for ::1 at 2020-05-14 10:42:28 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"authenticity_token"=>"AvSO9/aDn9Ef5TvI87Wef8P0SIamv1JnNi9jgANgojfyGXpoCKNCAKICaAJak2CasQzCfOWa6zdnFlR7ahuUPg==", "article"=>{"title"=>"Harley Davidson", "text"=>"Testing this article"}, "commit"=>"Create Article"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:30:in `block in create'
+  [1m[36mArticle Create (0.3ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["title", "Harley Davidson"], ["text", "Testing this article"], ["created_at", "2020-05-14 15:42:28.875873"], ["updated_at", "2020-05-14 15:42:28.875873"]]
+  ↳ app/controllers/articles_controller.rb:30:in `block in create'
+  [1m[35m (78.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:30:in `block in create'
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 88ms (ActiveRecord: 78.5ms | Allocations: 4005)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-14 10:42:28 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.4ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:67:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  Rendered articles/show.html.erb within layouts/application (Duration: 2.0ms | Allocations: 252)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 11.2ms | ActiveRecord: 0.4ms | Allocations: 4763)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 10:42:30 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.8ms | Allocations: 775)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.2ms | Allocations: 4208)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateActiveStorageTables (20200514154704)
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "active_storage_blobs" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "key" varchar NOT NULL, "filename" varchar NOT NULL, "content_type" varchar, "metadata" text, "byte_size" bigint NOT NULL, "checksum" varchar NOT NULL, "created_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_blobs_on_key" ON "active_storage_blobs" ("key")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "active_storage_attachments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar NOT NULL, "record_type" varchar NOT NULL, "record_id" integer NOT NULL, "blob_id" integer NOT NULL, "created_at" datetime NOT NULL, CONSTRAINT "fk_rails_c3b3935057"
+FOREIGN KEY ("blob_id")
+  REFERENCES "active_storage_blobs" ("id")
+)[0m
+  [1m[35m (0.1ms)[0m  [1m[35mCREATE  INDEX "index_active_storage_attachments_on_blob_id" ON "active_storage_attachments" ("blob_id")[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_active_storage_attachments_uniqueness" ON "active_storage_attachments" ("record_type", "record_id", "name", "blob_id")[0m
+  [1m[36mprimary::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200514154704"]]
+  [1m[35m (95.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/articles" for ::1 at 2020-05-14 10:52:51 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 3595)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 28ms (Views: 9.9ms | ActiveRecord: 0.1ms | Allocations: 9291)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-14 10:52:53 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:68:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  Rendered articles/show.html.erb within layouts/application (Duration: 43.5ms | Allocations: 5925)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 51ms (Views: 47.1ms | ActiveRecord: 0.8ms | Allocations: 10055)
+
+
+Started GET "/articles" for ::1 at 2020-05-14 10:52:54 -0500
+Processing by ArticlesController#index as HTML
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  ↳ app/views/articles/index.html.erb:15
+  Rendered articles/index.html.erb within layouts/application (Duration: 1.6ms | Allocations: 764)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.1ms | Allocations: 4194)
+
+
+Started GET "/articles/1/edit" for ::1 at 2020-05-14 10:52:56 -0500
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:68:in `set_article'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 7.4ms | Allocations: 1416)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 12.0ms | Allocations: 1792)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.1ms | Allocations: 5873)
+
+
+Started PATCH "/articles/1" for ::1 at 2020-05-14 10:53:37 -0500
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"kOKg6XU4tJ5ARX1Z7ItIomfwHupn6PCFseuJO6aeDJuCphhLYJH+GwxCh4yDwtekLpsaaComEqQEvW0MDn7e9w==", "article"=>{"title"=>"Harley Davidson", "text"=>"Testing this article", "image"=>#<ActionDispatch::Http::UploadedFile:0x00007f3d04a1bc40 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-10982-1nbpryz.jpg>, @original_filename="515luINJ1ML._AC_SX425_.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"515luINJ1ML._AC_SX425_.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:68:in `set_article'
+[31mUnpermitted parameter: :image[0m
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 7ms (ActiveRecord: 0.2ms | Allocations: 1481)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-14 10:53:37 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:68:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  Rendered articles/show.html.erb within layouts/application (Duration: 1.8ms | Allocations: 1060)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.2ms | Allocations: 5037)
+
+
+Started GET "/articles/1" for ::1 at 2020-05-14 10:53:39 -0500
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:68:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  Rendered articles/show.html.erb within layouts/application (Duration: 3.9ms | Allocations: 1055)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 18ms (Views: 13.7ms | ActiveRecord: 0.5ms | Allocations: 4997)
+
+
+Started GET "/articles/1/edit" for ::1 at 2020-05-14 10:54:07 -0500
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+Processing by ArticlesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.2ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:68:in `set_article'
+  Rendering articles/edit.html.erb within layouts/application
+  Rendered articles/_form.html.erb (Duration: 1.7ms | Allocations: 986)
+  Rendered articles/edit.html.erb within layouts/application (Duration: 2.1ms | Allocations: 1101)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 16ms (Views: 6.3ms | ActiveRecord: 0.6ms | Allocations: 9097)
+
+
+Started PATCH "/articles/1" for ::1 at 2020-05-14 10:54:13 -0500
+Processing by ArticlesController#update as HTML
+  Parameters: {"authenticity_token"=>"EUURJ9XjM0LkWXK+O4qy839TTuG1np68TG9FPK+WSAcDAamFwEp5x6heiGtUwy31NjhKY/hQfJ35OaELB3aaaw==", "article"=>{"title"=>"Harley Davidson", "text"=>"Testing this article", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055baa2357688 @tempfile=#<Tempfile:/tmp/RackMultipart20200514-10982-l2j5e4.jpg>, @original_filename="515luINJ1ML._AC_SX425_.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"515luINJ1ML._AC_SX425_.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Update Article", "id"=>"1"}
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:68:in `set_article'
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/articles_controller.rb:45:in `block in update'
+  [1m[36mActiveStorage::Blob Load (0.5ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" INNER JOIN "active_storage_attachments" ON "active_storage_blobs"."id" = "active_storage_attachments"."blob_id" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `block in update'
+  [1m[36mActiveStorage::Attachment Load (0.2ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `block in update'
+  [1m[36mActiveStorage::Blob Create (0.3ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "81nydl3krwszrvxs9klcnmfc6q9l"], ["filename", "515luINJ1ML._AC_SX425_.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-14 15:54:14.007846"]]
+  ↳ app/controllers/articles_controller.rb:45:in `block in update'
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-14 15:54:14.010811"]]
+  ↳ app/controllers/articles_controller.rb:45:in `block in update'
+  [1m[36mArticle Update (0.2ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-14 15:54:14.012820"], ["id", 1]]
+  ↳ app/controllers/articles_controller.rb:45:in `block in update'
+  [1m[35m (180.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/articles_controller.rb:45:in `block in update'
+[36m  Disk Storage (2.5ms) [0m[32mUploaded file to key: 81nydl3krwszrvxs9klcnmfc6q9l (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 9123b8ee-78e7-4913-82fc-81512fbbd338) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007f3d0464e9a0 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+Redirected to http://localhost:3000/articles/1
+Completed 302 Found in 755ms (ActiveRecord: 184.2ms | Allocations: 72598)
+
+
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9123b8ee-78e7-4913-82fc-81512fbbd338] Performing ActiveStorage::AnalyzeJob (Job ID: 9123b8ee-78e7-4913-82fc-81512fbbd338) from Async(active_storage_analysis) enqueued at 2020-05-14T15:54:14Z with arguments: #<GlobalID:0x00007f3d044ec2d8 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9123b8ee-78e7-4913-82fc-81512fbbd338] [36m  Disk Storage (0.4ms) [0m[34mDownloaded file from key: 81nydl3krwszrvxs9klcnmfc6q9l[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9123b8ee-78e7-4913-82fc-81512fbbd338] Skipping image analysis because the mini_magick gem isn't installed
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9123b8ee-78e7-4913-82fc-81512fbbd338]   [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9123b8ee-78e7-4913-82fc-81512fbbd338]   [1m[36mActiveStorage::Blob Update (0.6ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+Started GET "/articles/1" for ::1 at 2020-05-14 10:54:14 -0500
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9123b8ee-78e7-4913-82fc-81512fbbd338]   [1m[35m (131.1ms)[0m  [1m[36mcommit transaction[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [9123b8ee-78e7-4913-82fc-81512fbbd338] Performed ActiveStorage::AnalyzeJob (Job ID: 9123b8ee-78e7-4913-82fc-81512fbbd338) from Async(active_storage_analysis) in 153.7ms
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArticle Load (0.3ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/articles_controller.rb:68:in `set_article'
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.4ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  [1m[36mActiveStorage::Blob Load (0.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/articles/show.html.erb:3
+  Rendered articles/show.html.erb within layouts/application (Duration: 11.2ms | Allocations: 2382)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 25ms (Views: 19.8ms | ActiveRecord: 1.1ms | Allocations: 6365)
+
+
+Started GET "/rails/active_storage/blobs/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--62d235c768d2e7663d8c283f9f355d769f604ed7/515luINJ1ML._AC_SX425_.jpg" for ::1 at 2020-05-14 10:54:14 -0500
+Processing by ActiveStorage::BlobsController#show as JPEG
+  Parameters: {"signed_id"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBCZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--62d235c768d2e7663d8c283f9f355d769f604ed7", "filename"=>"515luINJ1ML._AC_SX425_"}
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[36m  Disk Storage (16.1ms) [0m[34mGenerated URL for file at key: 81nydl3krwszrvxs9klcnmfc6q9l (http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNTo1OToxNC42NDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d7d93919c06b49172d1c1bfb46393c08a974ff12/515luINJ1ML._AC_SX425_.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22515luINJ1ML._AC_SX425_.jpg%22%3B+filename%2A%3DUTF-8%27%27515luINJ1ML._AC_SX425_.jpg)[0m
+Redirected to http://localhost:3000/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNTo1OToxNC42NDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d7d93919c06b49172d1c1bfb46393c08a974ff12/515luINJ1ML._AC_SX425_.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22515luINJ1ML._AC_SX425_.jpg%22%3B+filename%2A%3DUTF-8%27%27515luINJ1ML._AC_SX425_.jpg
+Completed 302 Found in 19ms (ActiveRecord: 0.1ms | Allocations: 2237)
+
+
+Started GET "/rails/active_storage/disk/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNTo1OToxNC42NDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d7d93919c06b49172d1c1bfb46393c08a974ff12/515luINJ1ML._AC_SX425_.jpg?content_type=image%2Fjpeg&disposition=inline%3B+filename%3D%22515luINJ1ML._AC_SX425_.jpg%22%3B+filename%2A%3DUTF-8%27%27515luINJ1ML._AC_SX425_.jpg" for ::1 at 2020-05-14 10:54:14 -0500
+Processing by ActiveStorage::DiskController#show as JPEG
+  Parameters: {"content_type"=>"image/jpeg", "disposition"=>"inline; filename=\"515luINJ1ML._AC_SX425_.jpg\"; filename*=UTF-8''515luINJ1ML._AC_SX425_.jpg", "encoded_key"=>"eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdDRG9JYTJWNVNTSWhPREZ1ZVdSc00ydHlkM042Y25aNGN6bHJiR051Yldaak5uRTViQVk2QmtWVU9oQmthWE53YjNOcGRHbHZia2tpWDJsdWJHbHVaVHNnWm1sc1pXNWhiV1U5SWpVeE5XeDFTVTVLTVUxTUxsOUJRMTlUV0RReU5WOHVhbkJuSWpzZ1ptbHNaVzVoYldVcVBWVlVSaTA0SnljMU1UVnNkVWxPU2pGTlRDNWZRVU5mVTFnME1qVmZMbXB3WndZN0JsUTZFV052Ym5SbGJuUmZkSGx3WlVraUQybHRZV2RsTDJwd1pXY0dPd1pVIiwiZXhwIjoiMjAyMC0wNS0xNFQxNTo1OToxNC42NDlaIiwicHVyIjoiYmxvYl9rZXkifX0=--d7d93919c06b49172d1c1bfb46393c08a974ff12", "filename"=>"515luINJ1ML._AC_SX425_"}
+Completed 200 OK in 1ms (ActiveRecord: 0.0ms | Allocations: 480)
+
+
