@@ -28,7 +28,7 @@
 
   <div class="field">
     <%= form.label 'Select a category:' %>
-    <%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name, :priority), prompt: true) %>
+    <%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name, :priority), prompt: true, :selected => 1) %>
   </div>
 
   <div class="actions">
