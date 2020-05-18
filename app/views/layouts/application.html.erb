@@ -7,9 +7,39 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+      <script src="https://kit.fontawesome.com/8e996abce9.js"></script>
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="main">
+    <div class="main-container">
+      <header class="navbar">
+        <div>
+          <h1>The Station</h1>
+        </div>
+        <div>
+          <ul>
+            <li><a href="#" class="navbar-selected">Home</a></li>
+            <li><a href="#">e-sports</a></li>
+            <li><a href="#">pc</a></li>
+            <li><a href="#">playstation</a></li>
+            <li><a href="#">xbox</a></li>
+            <li><a href="#">mobile</a></li>
+          </ul>
+        </div>
+        <div class="navbar-login">
+          <div>
+            <% if session[:current_user_id].is_a? Integer %>
+              <h3>Current Profile: <%= link_to "#{@user.name}", @user %> | <%= link_to 'Log out', log_out_path, method: :delete %></h3>
+            <% else %>
+              <%= link_to 'LOGIN', sign_in_path %> | <%= link_to 'REGISTER', new_user_path %>
+            <% end %>
+          </div>
+          <div>
+            <i class="fas fa-search"></i>
+          </div>
+        </div>
+      </header>
+      <%= yield %>
+      </div>
   </body>
 </html>

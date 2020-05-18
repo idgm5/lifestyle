@@ -2,12 +2,6 @@
 
 <h1>Articles</h1>
 
-<% if session[:current_user_id].is_a? Integer %>
-  <h3>Current Profile: <%= link_to "#{@user.name}", @user %> | <%= link_to 'Log out', log_out_path, method: :delete %></h3>
-<% else %>
-  <%= link_to 'Sign up', new_user_path %> |  <%= link_to 'Sign in', sign_in_path %>
-<% end %>
-
 <table>
   <thead>
     <tr>
