@@ -1,8 +1,17 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Articles</h1>
+<section class="articles-row">
+  <% @articles.each do |article| %>
+  <div>
+    <%= image_tag(article.image, class:"article-image") %>
+    <h3><%= article.category.name%></h3>
+    <p><%= article.title%></p>
+  </div>
+  <% end %>
+</section>
 
-<table>
+
+<!-- <table>
   <thead>
     <tr>
       <th>Title</th>
@@ -33,7 +42,7 @@
       </tr>
     <% end %>
   </tbody>
-</table>
+</table> -->
 
 <br>
 

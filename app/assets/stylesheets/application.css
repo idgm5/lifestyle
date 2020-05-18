@@ -76,3 +76,41 @@
   font-size: 1.2rem;
   color: gray;
 }
+
+.articles-row {
+  display: flex;
+  height: 15rem;
+}
+
+.articles-row > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25%;
+  max-height: 100%;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.2));
+}
+
+.articles-row > div > img {
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.articles-row > div > h3,
+.articles-row > div > p {
+  z-index: 1;
+  position: absolute;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.articles-row > div > h3 {
+  border-bottom: solid yellow;
+}
+.articles-row > div > p {
+  bottom: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
