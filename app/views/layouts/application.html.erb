@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Lifestyle</title>
+    <title>The Station</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -40,6 +40,26 @@
         </div>
       </header>
       <%= yield %>
+      <footer>
+        <div class="footer-logo">
+          <h1>The Station</h1>
+        </div>
+        <div class="footer-terms">
+          <ul>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms & Conditions</a></li>
+            <li class="copyrights-text">Copyrights 2020. All rights reserved.</li>
+          </ul>
+        </div>
+        <div class="footer-social">
+          <p>Connect with us:</p>
+          <div>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fab fa-instagram-square"></i>
+            <i class="fab fa-facebook-square"></i>
+          </div>
+        </div>
+      </footer>
       </div>
   </body>
 </html>

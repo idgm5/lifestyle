@@ -29,6 +29,32 @@
   <% end %>
 </section>
 
+<section class="articles-category">
+  <div>
+    <% @articles.limit(2).each do |article| %>
+    <div>
+      <%= image_tag(article.image, class:"article-image") %>
+      <div class="category-article-content">
+        <h3><%= article.category.name%></h3>
+        <h2><%= article.title%></h2>
+        <p><%= article.text %></p>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <div>
+    <% @articles.limit(2).each do |article| %>
+    <div>
+      <div class="category-article-content">
+        <h3><%= article.category.name%></h3>
+        <h2><%= article.title%></h2>
+        <p><%= article.text %></p>
+      </div>
+      <%= image_tag(article.image, class:"article-image") %>
+    </div>
+    <% end %>
+  </div>
+</section>
 
 <!-- <table>
   <thead>
@@ -63,6 +89,6 @@
   </tbody>
 </table> -->
 
-<br>
+<!-- <br>
 
-<%= link_to 'New Article', new_article_path %>
+<%= link_to 'New Article', new_article_path %> -->
