@@ -5,11 +5,15 @@ class ArticlesController < ApplicationController
   # GET /articles.json
   def index
     @articles = Article.all
+
+    @categories = Category.all.sort_by{ |category| category.priority }.reverse
+
     if session[:current_user_id].is_a? Integer
        @user = User.find(session[:current_user_id])
     else
        @user = User.first
     end
+
 
     @main_article = @articles.sort_by{ |article| article.votes.count }.reverse.first
     @second_article = @articles.sort_by{ |article| article.votes.count }.reverse.second

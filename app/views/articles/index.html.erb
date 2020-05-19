@@ -3,33 +3,31 @@
   <div class="frontpage">
     <%= link_to ' ', @main_article, class: 'click-image'%>
     <%= image_tag(@main_article.image, class:"article-image") %>
-    <h3><%= @main_article.title%></h3>
-    <p><%= @main_article.text%></p>
+    <h3 class="text"><%= @main_article.title%></h3>
+    <p class="text"><%= @main_article.text%></p>
   </div>
   <div class="articles-column">
     <div>
       <%= link_to ' ', @second_article, class: 'click-image'%>
       <%= image_tag(@second_article.image, class:"article-image") %>
       <h3><%= @second_article.title%></h3>
-      <p><%= @second_article.text%></p>
     </div>
 
     <div>
       <%= link_to ' ', @third_article, class: 'click-image'%>
       <%= image_tag(@third_article.image, class:"article-image") %>
       <h3><%= @third_article.title%></h3>
-      <p><%= @third_article.text%></p>
     </div>
   </div>
 </section>
 <section class="articles-row">
-  <% @articles.each do |article| %>
-  <div>
-    <%= link_to ' ', article, class: 'click-image'%>
-    <%= image_tag(article.image, class:"article-image") %>
-    <h3><%= article.category.name%></h3>
-    <p><%= article.title%></p>
-  </div>
+  <% @categories.each do |category| %>
+    <div>
+      <%= link_to ' ', category.articles.sort_by(&:created_at).last, class: 'click-image'%>
+      <%= image_tag(category.articles.sort_by(&:created_at).last.image, class:"article-image") %>
+      <h3><%= category.articles.sort_by(&:created_at).last.category.name%></h3>
+      <p><%= category.articles.sort_by(&:created_at).last.title%></p>
+    </div>
   <% end %>
 </section>
 
@@ -40,8 +38,16 @@
       <%= image_tag(article.image, class:"article-image") %>
       <div class="category-article-content">
         <h3><%= article.category.name%></h3>
-        <h2><%= link_to article.title, article %></h2>
+        <h2><%= article.title %></h2>
+        <h2>Author: <%= article.author.name %></h2>
         <p><%= article.text %></p>
+        <% if session[:current_user_id].is_a? Integer %>
+          <% if article.votes.find_by(user_id: @user).present? %>
+            <h3><%= link_to 'Dislike', unvote_path(user_id: @user, article_id: article), method: :put %></h3>
+          <% else %>
+            <h3><%= link_to 'Like', vote_path(user_id: @user, article_id: article), method: :put %></h3>
+          <% end %>
+        <% end %>
       </div>
     </div>
     <% end %>
@@ -51,8 +57,16 @@
     <div>
       <div class="category-article-content">
         <h3><%= article.category.name%></h3>
-        <h2><%= link_to article.title, article %></h2>
+        <h2><%= article.title %></h2>
+        <h2>Author: <%= article.author.name %></h2>
         <p><%= article.text %></p>
+        <% if session[:current_user_id].is_a? Integer %>
+          <% if article.votes.find_by(user_id: @user).present? %>
+            <h3><%= link_to 'Dislike', unvote_path(user_id: @user, article_id: article), method: :put %></h3>
+          <% else %>
+            <h3><%= link_to 'Like', vote_path(user_id: @user, article_id: article), method: :put %></h3>
+          <% end %>
+        <% end %>
       </div>
       <%= image_tag(article.image, class:"article-image") %>
     </div>

@@ -143,8 +143,16 @@
   background: transparent;
 }
 
+.text {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
 .click-image:hover {
-  background-color: transparent; 
+  background-color: transparent;
   text-decoration: none;
 }
 
@@ -180,8 +188,11 @@
 
 .frontpage > h3,
 .articles-column > div > h3 {
+  color: yellowgreen;
+}
+
+.frontpage > h3 {
   bottom: 2rem;
-  color: coral;
 }
 
 .articles-category {
