@@ -1,6 +1,6 @@
 <%= form_with(model: user, local: true) do |form| %>
   <% if user.errors.any? %>
-    <div id="error_explanation">
+    <div id="error_explanation">o
       <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
 
       <ul>
@@ -11,12 +11,18 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+  <div class="form-container">
+    <div class="form-style-2">
+    <div class="form-style-2-heading"> Creating an account </div>
+    <div class="field">
+      <%= form.label 'Write a name for this account.' %>
+      <%= form.text_field :name, class: 'input-field' %>
+    </div>
+
+    <div class="actions">
+      <%= form.submit 'Create Account'%>
+    </div>
+    </div>
   </div>
 
-  <div class="actions">
-    <%= form.submit %>
-  </div>
 <% end %>

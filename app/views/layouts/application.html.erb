@@ -19,7 +19,9 @@
         <div>
           <ul>
             <li><a href="/" class="navbar-selected">Home</a></li>
+            <% if session[:current_user_id].is_a? Integer %>
             <li><%= link_to 'Write an Article', new_article_path %></li>
+            <% end %>
           </ul>
         </div>
         <div class="navbar-login">
