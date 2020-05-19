@@ -10,6 +10,10 @@ class ArticlesController < ApplicationController
     else
        @user = User.first
     end
+
+    @main_article = @articles.sort_by{ |article| article.votes.count }.reverse.first
+    @second_article = @articles.sort_by{ |article| article.votes.count }.reverse.second
+    @third_article = @articles.sort_by{ |article| article.votes.count }.reverse.third
   end
 
   def vote
