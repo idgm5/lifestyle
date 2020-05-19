@@ -1,18 +1,21 @@
 <p id="notice"><%= notice %></p>
 <section class="articles-frontpage">
   <div class="frontpage">
+    <%= link_to ' ', @main_article, class: 'click-image'%>
     <%= image_tag(@main_article.image, class:"article-image") %>
     <h3><%= @main_article.title%></h3>
     <p><%= @main_article.text%></p>
   </div>
   <div class="articles-column">
     <div>
+      <%= link_to ' ', @second_article, class: 'click-image'%>
       <%= image_tag(@second_article.image, class:"article-image") %>
       <h3><%= @second_article.title%></h3>
       <p><%= @second_article.text%></p>
     </div>
 
     <div>
+      <%= link_to ' ', @third_article, class: 'click-image'%>
       <%= image_tag(@third_article.image, class:"article-image") %>
       <h3><%= @third_article.title%></h3>
       <p><%= @third_article.text%></p>
@@ -22,6 +25,7 @@
 <section class="articles-row">
   <% @articles.each do |article| %>
   <div>
+    <%= link_to ' ', article, class: 'click-image'%>
     <%= image_tag(article.image, class:"article-image") %>
     <h3><%= article.category.name%></h3>
     <p><%= article.title%></p>
@@ -36,7 +40,7 @@
       <%= image_tag(article.image, class:"article-image") %>
       <div class="category-article-content">
         <h3><%= article.category.name%></h3>
-        <h2><%= article.title%></h2>
+        <h2><%= link_to article.title, article %></h2>
         <p><%= article.text %></p>
       </div>
     </div>
@@ -47,7 +51,7 @@
     <div>
       <div class="category-article-content">
         <h3><%= article.category.name%></h3>
-        <h2><%= article.title%></h2>
+        <h2><%= link_to article.title, article %></h2>
         <p><%= article.text %></p>
       </div>
       <%= image_tag(article.image, class:"article-image") %>

@@ -134,6 +134,20 @@
   z-index: -1;
 }
 
+.click-image {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.click-image:hover {
+  background-color: transparent; 
+  text-decoration: none;
+}
+
 .articles-row > div > h3,
 .articles-row > div > p,
 .frontpage > h3,
