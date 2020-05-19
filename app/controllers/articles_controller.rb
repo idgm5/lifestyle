@@ -1,23 +1,22 @@
 class ArticlesController < ApplicationController
-  before_action :set_article, only: [:show, :edit, :update, :destroy]
+  before_action :set_article, only: %i[show edit update destroy]
 
   # GET /articles
   # GET /articles.json
   def index
     @articles = Article.all
 
-    @categories = Category.all.sort_by{ |category| category.priority }.reverse
+    @categories = Category.all.sort_by(&:priority).reverse
 
-    if session[:current_user_id].is_a? Integer
-       @user = User.find(session[:current_user_id])
-    else
-       @user = User.first
-    end
+    @user = if session[:current_user_id].is_a? Integer
+              User.find(session[:current_user_id])
+            else
+              User.first
+            end
 
-
-    @main_article = @articles.sort_by{ |article| article.votes.count }.reverse.first
-    @second_article = @articles.sort_by{ |article| article.votes.count }.reverse.second
-    @third_article = @articles.sort_by{ |article| article.votes.count }.reverse.third
+    @main_article = @articles.sort_by { |article| article.votes.count }.reverse.first
+    @second_article = @articles.sort_by { |article| article.votes.count }.reverse.second
+    @third_article = @articles.sort_by { |article| article.votes.count }.reverse.third
   end
 
   def vote
@@ -44,21 +43,21 @@ class ArticlesController < ApplicationController
       redirect_to root_path
     end
   end
+
   # GET /articles/1
   # GET /articles/1.json
-  def show
-  end
+  def show; end
 
   def collection
     @article = Article.find(params[:id])
 
     @collection = Article.where(category_id: @article.category_id)
 
-    if session[:current_user_id].is_a? Integer
-       @user = User.find(session[:current_user_id])
-    else
-       @user = User.first
-    end
+    @user = if session[:current_user_id].is_a? Integer
+              User.find(session[:current_user_id])
+            else
+              User.first
+            end
   end
 
   # GET /articles/new
@@ -67,8 +66,7 @@ class ArticlesController < ApplicationController
   end
 
   # GET /articles/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /articles
   # POST /articles.json
@@ -113,17 +111,18 @@ class ArticlesController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_article
-      @article = Article.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def article_params
-      params.require(:article).permit(:title, :text, :image, :category_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_article
+    @article = Article.find(params[:id])
+  end
 
-    def vote_params
-      params.permit(:user_id, :article_id)
-    end
+  # Only allow a list of trusted parameters through.
+  def article_params
+    params.require(:article).permit(:title, :text, :image, :category_id)
+  end
+
+  def vote_params
+    params.permit(:user_id, :article_id)
+  end
 end

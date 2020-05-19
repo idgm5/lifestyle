@@ -1,10 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe 'Articles Management' do
-
   describe 'add a new article' do
     before do
-     Category.create(name:"testing", priority: 2)
+      Category.create(name: 'testing', priority: 2)
     end
 
     it 'creates a new user and generates a new article' do
@@ -36,7 +35,7 @@ RSpec.describe 'Articles Management' do
 
   describe 'updates an article' do
     before do
-     Category.create(name:"testing", priority: 2)
+      Category.create(name: 'testing', priority: 2)
     end
 
     it 'updates a recent created article' do

@@ -16,7 +16,7 @@ RSpec.describe Article, type: :model do
       article.title = '   '
       expect(article).to_not be_valid
     end
-    
+
     it 'should not be valid if text is blank' do
       article.text = '   '
       expect(article).to_not be_valid
