@@ -1,6 +1,7 @@
 # rubocop:disable Lint/UselessAssignment;
+# rubocop:disable Style/MixinUsage;
+include ActionDispatch::TestProcess
 FactoryBot.define do
-  include ActionDispatch::TestProcess
   factory :article do
     title { Faker::Book.title }
     text { Faker::Lorem.paragraph(sentence_count = 3, supplemental = false, random_sentences_to_add = 3) }
@@ -10,3 +11,4 @@ FactoryBot.define do
   end
 end
 # rubocop:enable Lint/UselessAssignment;
+# rubocop:enable Style/MixinUsage;

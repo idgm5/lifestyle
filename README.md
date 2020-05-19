@@ -1,4 +1,4 @@
-# The Station - A rails news website
+# The Station - A news website for gamers
 
 > This a captsone project for the Microverse Program, all the requirements and design concepts are included.
 
@@ -13,6 +13,25 @@
 ## Live Demo
 
 [Hosted on Heroku](#)
+
+## Features
+- You can create a new account using only a user name.
+- You can log in with any account using the user name.
+- As a user, you can create an article with a title, text, available category, and image.
+- As a user, you can like (vote) for an article.
+- The articles with more likes (votes) will be displayed at the frontpage, the larger picture will be available for the article with the most likes.
+- The articles row will display up to 4 categories and the latest article created, also it will be ordered based on priority.
+- Once you click a category you will be redirected to a page with all the articles that belong to that category.
+- You can always dislike an article (unvote) and you can only like (vote) once.
+
+
+## Associations are created based on this table
+![image](https://i.imgur.com/ZNoE4tj.png)
+
+## Extra feature
+You can click on your profile once you have an account, and access to a list of all the articles that you previously liked.
+
+![image](https://i.imgur.com/basariC.png)
 
 ### Setup
 
