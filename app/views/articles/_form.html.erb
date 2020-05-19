@@ -11,27 +11,30 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :title %>
-    <%= form.text_field :title %>
-  </div>
+  <div class="form-container">
+    <div class="form-style-2">
+    <div class="form-style-2-heading"> Take your time to write an incredible article, <%= @user.name %>.</div>
+      <div class="field">
+        <%= form.text_field :title, placeholder: 'Write a title for your article', class:'input-field' %>
+      </div>
 
-  <div class="field">
-    <%= form.label :text %>
-    <%= form.text_area :text %>
-  </div>
+      <div class="field">
+        <%= form.text_area :text, placeholder: 'Start writing your article here...', class: 'textarea-field'%>
+      </div>
 
-  <div class="field">
-    <%= form.label 'Article Picture'%>
-    <%= form.file_field :image %>
-  </div>
+      <div class="field">
+        <%= form.label 'Add a picture for your article.' %>
+        <%= form.file_field :image %>
+      </div>
 
-  <div class="field">
-    <%= form.label 'Select a category:' %>
-    <%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name, :priority), prompt: true, :selected => 1) %>
-  </div>
+      <div class="field">
+        <%= form.label 'Select a category for the article.' %>
+        <%= form.select(:category_id, options_from_collection_for_select(Category.all, :id, :name, :priority), prompt: true, :selected => 1, class: 'select-field') %>
+      </div>
 
-  <div class="actions">
-    <%= form.submit %>
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    </div>
   </div>
 <% end %>

@@ -1,0 +1,23 @@
+<section class="articles-category">
+  <div>
+    <% @collection.each do |collection| %>
+      <div>
+        <%= image_tag(collection.image, class:"article-image") %>
+        <div class="category-article-content">
+          <h3><%= simple_format(collection.category.name) %></h3>
+          <h2><%= collection.title %></h2>
+          <h2>Author:
+            <%= collection.author.name %></h2>
+          <p class="text"><%= collection.text %></p>
+          <% if session[:current_user_id].is_a? Integer %>
+            <% if collection.votes.find_by(user_id: @user).present? %>
+              <h3><%= link_to 'Dislike', unvote_path(user_id: @user, article_id: collection), method: :put %></h3>
+            <% else %>
+              <h3><%= link_to 'Like', vote_path(user_id: @user, article_id: collection), method: :put %></h3>
+            <% end %>
+          <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</section>

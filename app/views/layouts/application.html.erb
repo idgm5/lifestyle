@@ -18,12 +18,8 @@
         </div>
         <div>
           <ul>
-            <li><a href="#" class="navbar-selected">Home</a></li>
-            <li><a href="#">e-sports</a></li>
-            <li><a href="#">pc</a></li>
-            <li><a href="#">playstation</a></li>
-            <li><a href="#">xbox</a></li>
-            <li><a href="#">mobile</a></li>
+            <li><a href="/" class="navbar-selected">Home</a></li>
+            <li><%= link_to 'Write an Article', new_article_path %></li>
           </ul>
         </div>
         <div class="navbar-login">
@@ -40,26 +36,28 @@
         </div>
       </header>
       <%= yield %>
-      <footer>
-        <div class="footer-logo">
-          <h1><a href="#">The Station</a></h1>
-        </div>
-        <div class="footer-terms">
-          <ul>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms & Conditions</a></li>
-            <li class="copyrights-text">Copyrights 2020. All rights reserved.</li>
-          </ul>
-        </div>
-        <div class="footer-social">
-          <p>Connect with us:</p>
-          <div>
-            <a href="#"><i class="fab fa-twitter-square"></i></a>
-            <a href="#"><i class="fab fa-instagram-square"></i></a>
-            <a href="#"><i class="fab fa-facebook-square"></i></a>
+      </div>
+      <div class="main-container">
+        <footer>
+          <div class="footer-logo">
+            <h1><a href="#">The Station</a></h1>
           </div>
-        </div>
-      </footer>
+          <div class="footer-terms">
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms & Conditions</a></li>
+              <li class="copyrights-text">Copyrights 2020. All rights reserved.</li>
+            </ul>
+          </div>
+          <div class="footer-social">
+            <p>Connect with us:</p>
+            <div>
+              <a href="#"><i class="fab fa-twitter-square"></i></a>
+              <a href="#"><i class="fab fa-instagram-square"></i></a>
+              <a href="#"><i class="fab fa-facebook-square"></i></a>
+            </div>
+          </div>
+        </footer>
       </div>
   </body>
 </html>

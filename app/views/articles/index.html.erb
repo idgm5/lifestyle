@@ -23,90 +23,10 @@
 <section class="articles-row">
   <% @categories.each do |category| %>
     <div>
-      <%= link_to ' ', category.articles.sort_by(&:created_at).last, class: 'click-image'%>
+      <%= link_to ' ', collection_path(id: category.articles.sort_by(&:created_at).last), class: 'click-image'%>
       <%= image_tag(category.articles.sort_by(&:created_at).last.image, class:"article-image") %>
       <h3><%= category.articles.sort_by(&:created_at).last.category.name%></h3>
       <p><%= category.articles.sort_by(&:created_at).last.title%></p>
     </div>
   <% end %>
 </section>
-
-<section class="articles-category">
-  <div>
-    <% @articles.limit(2).each do |article| %>
-    <div>
-      <%= image_tag(article.image, class:"article-image") %>
-      <div class="category-article-content">
-        <h3><%= article.category.name%></h3>
-        <h2><%= article.title %></h2>
-        <h2>Author: <%= article.author.name %></h2>
-        <p><%= article.text %></p>
-        <% if session[:current_user_id].is_a? Integer %>
-          <% if article.votes.find_by(user_id: @user).present? %>
-            <h3><%= link_to 'Dislike', unvote_path(user_id: @user, article_id: article), method: :put %></h3>
-          <% else %>
-            <h3><%= link_to 'Like', vote_path(user_id: @user, article_id: article), method: :put %></h3>
-          <% end %>
-        <% end %>
-      </div>
-    </div>
-    <% end %>
-  </div>
-  <div>
-    <% @articles.limit(2).each do |article| %>
-    <div>
-      <div class="category-article-content">
-        <h3><%= article.category.name%></h3>
-        <h2><%= article.title %></h2>
-        <h2>Author: <%= article.author.name %></h2>
-        <p><%= article.text %></p>
-        <% if session[:current_user_id].is_a? Integer %>
-          <% if article.votes.find_by(user_id: @user).present? %>
-            <h3><%= link_to 'Dislike', unvote_path(user_id: @user, article_id: article), method: :put %></h3>
-          <% else %>
-            <h3><%= link_to 'Like', vote_path(user_id: @user, article_id: article), method: :put %></h3>
-          <% end %>
-        <% end %>
-      </div>
-      <%= image_tag(article.image, class:"article-image") %>
-    </div>
-    <% end %>
-  </div>
-</section>
-
-<!-- <table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Text</th>
-      <th>Category</th>
-      <th>Votes</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @articles.each do |article| %>
-      <tr>
-        <td><%= article.title %></td>
-        <td><%= article.text %></td>
-        <td><%= article.category.name %></td>
-        <td><%= article.votes.count %></td>
-        <% if session[:current_user_id].is_a? Integer %>
-          <% if article.votes.find_by(user_id: @user).present? %>
-            <td><%= link_to 'Dislike', unvote_path(user_id: @user, article_id: article), method: :put %></td>
-          <% else %>
-            <td><%= link_to 'Like', vote_path(user_id: @user, article_id: article), method: :put %></td>
-          <% end %>
-        <% end %>
-        <td><%= link_to 'Show', article %></td>
-        <td><%= link_to 'Edit', edit_article_path(article) %></td>
-        <td><%= link_to 'Destroy', article, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table> -->
-
-<!-- <br>
-
-<%= link_to 'New Article', new_article_path %> -->

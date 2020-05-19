@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   put '/vote/' => 'articles#vote'
   put '/unvote/' => 'articles#unvote'
 
+  get 'collection', action: :collection, controller: 'articles'
+
   get 'sign_in', action: :sign_in, controller: 'users'
   post 'login', action: :login, controller: 'users'
   delete 'log_out', action: :destroy, controller: 'users'
