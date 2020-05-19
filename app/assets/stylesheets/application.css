@@ -25,7 +25,7 @@
 .main-container {
   width: 1300px;
   background-color: white;
-  z-index: -1;
+  z-index: 0;
 }
 
 .navbar {
@@ -214,8 +214,9 @@ footer {
   height: 4rem;
 }
 
-.footer-logo > h1 {
+.footer-logo > h1 > a{
   color: white;
+  text-decoration: none;
 }
 
 .footer-terms > ul {
@@ -244,11 +245,11 @@ footer {
 
 .footer-social > div {
   display: flex;
-  color: red;
   padding: 0 0.5rem;
 }
 
-.footer-social > div > i {
+.footer-social > div > a > i {
   padding: 0 0.2rem;
   font-size: 1.5rem;
+  color: red;
 }
