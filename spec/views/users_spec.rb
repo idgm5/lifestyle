@@ -4,12 +4,12 @@ RSpec.describe 'Testing Authentication' do
   describe 'adding a new user' do
     it 'creates a new user' do
       visit('/')
-      click_link('Sign up')
+      click_link('REGISTER')
 
       expect(current_path).to have_content('/users/new')
 
       fill_in('user[name]', with: 'user1003')
-      click_button('Create User')
+      click_button('Create Account')
 
       expect(current_path).to have_content('/')
       expect(page).to have_content('Current Profile: user1003')

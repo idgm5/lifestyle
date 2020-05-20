@@ -25,7 +25,7 @@
 - You can always dislike an article (unvote) and you can only like (vote) once.
 
 
-## Associations are created based on this table
+## Associations are created based on this ERD
 ![image](https://i.imgur.com/ZNoE4tj.png)
 
 ## Extra feature
