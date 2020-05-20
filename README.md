@@ -70,6 +70,8 @@ rspec --format documentation
 
 ```
 
+![image](https://i.imgur.com/Ud2qeSb.png)
+
 ## Created by
 
 👤 **Isaac Gonzalez**

@@ -7239,3 +7239,639 @@ Processing by ArticlesController#show as HTML
 Completed 200 OK in 8ms (Views: 6.0ms | ActiveRecord: 0.3ms | Allocations: 4839)
   [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
   [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "schema_sha1"]]
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (67.4ms)[0m  [1m[31mDELETE FROM "active_storage_blobs";[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_blobs';[0m
+  [1m[35m (124.1ms)[0m  [1m[31mDELETE FROM "categories";[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'categories';[0m
+  [1m[35m (407.7ms)[0m  [1m[31mDELETE FROM "users";[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'users';[0m
+  [1m[35m (254.1ms)[0m  [1m[31mDELETE FROM "votes";[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'votes';[0m
+  [1m[35m (726.5ms)[0m  [1m[31mDELETE FROM "active_storage_attachments";[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'active_storage_attachments';[0m
+  [1m[35m (771.7ms)[0m  [1m[31mDELETE FROM "articles";[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT name FROM sqlite_master WHERE type='table' AND name='sqlite_sequence';[0m
+  [1m[35m (0.2ms)[0m  [1m[31mDELETE FROM sqlite_sequence where name = 'articles';[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Renato Hane"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Renato Hane"], ["created_at", "2020-05-20 01:40:45.773990"], ["updated_at", "2020-05-20 01:40:45.773990"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Ms. Marcos Reilly"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.3ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ms. Marcos Reilly"], ["created_at", "2020-05-20 01:40:45.862383"], ["updated_at", "2020-05-20 01:40:45.862383"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lili Pouros"], ["priority", 4], ["created_at", "2020-05-20 01:40:45.878667"], ["updated_at", "2020-05-20 01:40:45.878667"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.2ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Fame Is the Spur"], ["text", "Aut numquam similique. Cum adipisci praesentium. Dolorem sequi dolorum."], ["created_at", "2020-05-20 01:40:45.916042"], ["updated_at", "2020-05-20 01:40:45.916042"], ["author_id", 2], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "nbl439f0nh8dh2y07kc7f19njj8j"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:45.917991"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:45.918885"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:45.919420"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: nbl439f0nh8dh2y07kc7f19njj8j (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b42563db-b232-4ae0-a963-fb2af8eff30e) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0b20c48 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+Processing by ArticlesController#vote as HTML
+  Parameters: {"article_id"=>"1", "user_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Create (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 1], ["created_at", "2020-05-20 01:40:45.932511"], ["updated_at", "2020-05-20 01:40:45.932511"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/collection?id=1
+Completed 302 Found in 7ms (ActiveRecord: 0.5ms | Allocations: 4400)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Nanci Nitzsche"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Nanci Nitzsche"], ["created_at", "2020-05-20 01:40:45.943829"], ["updated_at", "2020-05-20 01:40:45.943829"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Norris Krajcik"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Norris Krajcik"], ["created_at", "2020-05-20 01:40:45.947500"], ["updated_at", "2020-05-20 01:40:45.947500"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mike Ortiz"], ["priority", 8], ["created_at", "2020-05-20 01:40:45.949262"], ["updated_at", "2020-05-20 01:40:45.949262"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "After Many a Summer Dies the Swan"], ["text", "Voluptatem perspiciatis qui. Sunt earum laboriosam. Dignissimos aut harum."], ["created_at", "2020-05-20 01:40:45.952576"], ["updated_at", "2020-05-20 01:40:45.952576"], ["author_id", 2], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "lj1782df5bmtbg79l681hc99n7cd"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:45.954383"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:45.955255"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:45.955880"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.7ms) [0m[32mUploaded file to key: lj1782df5bmtbg79l681hc99n7cd (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: db23f5c2-cf67-4ec6-a8f2-a2f4a9b7d8c2) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0d2aa98 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+Processing by ArticlesController#vote as HTML
+  Parameters: {"article_id"=>"1", "user_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Create (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 1], ["article_id", 1], ["created_at", "2020-05-20 01:40:45.961737"], ["updated_at", "2020-05-20 01:40:45.961737"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/collection?id=1
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 1272)
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes"[0m
+Processing by ArticlesController#unvote as HTML
+  Parameters: {"article_id"=>"1", "user_id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mVote Load (0.1ms)[0m  [1m[34mSELECT "votes".* FROM "votes" WHERE "votes"."user_id" = ? AND "votes"."article_id" = ? LIMIT ?[0m  [["user_id", 1], ["article_id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mVote Destroy (0.1ms)[0m  [1m[31mDELETE FROM "votes" WHERE "votes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://test.host/collection?id=1
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 729)
+  [1m[35m (0.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "votes"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Deon Schimmel PhD"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Deon Schimmel PhD"], ["created_at", "2020-05-20 01:40:45.974974"], ["updated_at", "2020-05-20 01:40:45.974974"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mitchell Oberbrunner"], ["priority", 2], ["created_at", "2020-05-20 01:40:45.976520"], ["updated_at", "2020-05-20 01:40:45.976520"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Waiting for the Barbarians"], ["text", "Deleniti corporis ut. Et est atque. Maiores dolores reprehenderit."], ["created_at", "2020-05-20 01:40:45.979318"], ["updated_at", "2020-05-20 01:40:45.979318"], ["author_id", 1], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "i8793l8i94ie2fxwkdefaazmo5xr"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:45.980785"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:45.981480"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:45.982020"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.5ms) [0m[32mUploaded file to key: i8793l8i94ie2fxwkdefaazmo5xr (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 3cd472d6-9476-4b02-b72e-936fc1f4809e) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0dd6d20 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Sumiko Balistreri"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Sumiko Balistreri"], ["created_at", "2020-05-20 01:40:45.990352"], ["updated_at", "2020-05-20 01:40:45.990352"]]
+  [1m[35m (0.3ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.3ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Huey Spinka"], ["priority", 10], ["created_at", "2020-05-20 01:40:45.992016"], ["updated_at", "2020-05-20 01:40:45.992016"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "All the King's Men"], ["text", "Deserunt et sed. Amet aut quia. Laborum dolores facilis."], ["created_at", "2020-05-20 01:40:45.995592"], ["updated_at", "2020-05-20 01:40:45.995592"], ["author_id", 1], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "qhosmdindvivmr09k33xqx0ct7kw"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:45.997238"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:45.997983"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:45.999514"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.5ms) [0m[32mUploaded file to key: qhosmdindvivmr09k33xqx0ct7kw (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: eb74b218-9b08-44fc-be27-1bde7dc9d5fc) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0e50b98 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Arica Steuber DVM"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Arica Steuber DVM"], ["created_at", "2020-05-20 01:40:46.007466"], ["updated_at", "2020-05-20 01:40:46.007466"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Catherine Wisoky"], ["priority", 1], ["created_at", "2020-05-20 01:40:46.008768"], ["updated_at", "2020-05-20 01:40:46.008768"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Moab Is My Washpot"], ["text", "Aperiam at alias. Et veritatis impedit. Voluptatibus cupiditate sit."], ["created_at", "2020-05-20 01:40:46.011322"], ["updated_at", "2020-05-20 01:40:46.011322"], ["author_id", 1], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "cml9d8ybj6xf9nu75l8zba44q2sx"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:46.012920"]]
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:46.013672"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:46.014356"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (4.0ms) [0m[32mUploaded file to key: cml9d8ybj6xf9nu75l8zba44q2sx (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: b9c13e0b-cc0c-46a6-b156-8106a142b9c1) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0ee2d68 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Blob Load (6.3ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Elnora Bins"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Elnora Bins"], ["created_at", "2020-05-20 01:40:46.026948"], ["updated_at", "2020-05-20 01:40:46.026948"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ms. Trinidad Tremblay"], ["priority", 3], ["created_at", "2020-05-20 01:40:46.029164"], ["updated_at", "2020-05-20 01:40:46.029164"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Consider Phlebas"], ["text", "Aliquam rerum saepe. Omnis atque earum. Ut molestiae nihil."], ["created_at", "2020-05-20 01:40:46.032802"], ["updated_at", "2020-05-20 01:40:46.032802"], ["author_id", 1], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "ujf7g46sswc5i5ebsgu38wz7rfl4"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:46.034360"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:46.035094"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:46.035673"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (1.7ms) [0m[32mUploaded file to key: ujf7g46sswc5i5ebsgu38wz7rfl4 (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 00d487ee-39b9-4c3d-b40a-d5bdd20b6e26) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fad50061940 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.4ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mCACHE ActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Elsie Johnston"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Elsie Johnston"], ["created_at", "2020-05-20 01:40:46.046169"], ["updated_at", "2020-05-20 01:40:46.046169"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cleo Gleason"], ["priority", 8], ["created_at", "2020-05-20 01:40:46.057293"], ["updated_at", "2020-05-20 01:40:46.057293"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Wind's Twelve Quarters"], ["text", "Rerum fuga asperiores. Molestiae odio nobis. Nostrum ut eum."], ["created_at", "2020-05-20 01:40:46.059958"], ["updated_at", "2020-05-20 01:40:46.059958"], ["author_id", 1], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "hm0nn4n08a0r6idrk3znl9tw2ist"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:46.061490"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:46.062160"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:46.062710"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: hm0nn4n08a0r6idrk3znl9tw2ist (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 034dd93c-3f3b-4873-bad7-bc4f9c2a3664) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc105c950 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Miss Horace Deckow"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Miss Horace Deckow"], ["created_at", "2020-05-20 01:40:46.070530"], ["updated_at", "2020-05-20 01:40:46.070530"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mose Connelly"], ["priority", 3], ["created_at", "2020-05-20 01:40:46.071903"], ["updated_at", "2020-05-20 01:40:46.071903"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Of Mice and Men"], ["text", "Est quod rerum. Quae sit ducimus. Voluptas cum fugit."], ["created_at", "2020-05-20 01:40:46.074214"], ["updated_at", "2020-05-20 01:40:46.074214"], ["author_id", 1], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "8vyruqlb1ro6lt2ovst3dscm9xwe"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:46.075799"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:46.076482"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:46.077027"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.6ms) [0m[32mUploaded file to key: 8vyruqlb1ro6lt2ovst3dscm9xwe (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 6871ec71-4fe6-4491-a8d5-9c96de035112) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc109a700 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Issac Jaskolski"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Issac Jaskolski"], ["created_at", "2020-05-20 01:40:46.085466"], ["updated_at", "2020-05-20 01:40:46.085466"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Burt Beahan"], ["priority", 5], ["created_at", "2020-05-20 01:40:46.087897"], ["updated_at", "2020-05-20 01:40:46.087897"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "To a God Unknown"], ["text", "Est adipisci ex. Officia a dolor. Et amet dignissimos."], ["created_at", "2020-05-20 01:40:46.091194"], ["updated_at", "2020-05-20 01:40:46.091194"], ["author_id", 1], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "q5yx0dczlyg6548ksndlxq77q2ea"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:46.092839"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:46.093534"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:46.094042"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (2.5ms) [0m[32mUploaded file to key: q5yx0dczlyg6548ksndlxq77q2ea (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 67e499c4-592f-428e-bb30-be6e7e575ba3) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0f0db08 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Russell Lindgren III"], ["priority", 6], ["created_at", "2020-05-20 01:40:46.108966"], ["updated_at", "2020-05-20 01:40:46.108966"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Yolando Tremblay"], ["priority", 8], ["created_at", "2020-05-20 01:40:46.112580"], ["updated_at", "2020-05-20 01:40:46.112580"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.4ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dr. Russel Wiegand"], ["priority", 5], ["created_at", "2020-05-20 01:40:46.116804"], ["updated_at", "2020-05-20 01:40:46.116804"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.2ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Larry Ritchie"], ["priority", 6], ["created_at", "2020-05-20 01:40:46.121292"], ["updated_at", "2020-05-20 01:40:46.121292"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA defer_foreign_keys = ON[0m
+  [1m[35m (0.0ms)[0m  [1m[35mPRAGMA foreign_keys = OFF[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mFixtures Load (0.2ms)[0m  [1m[31mDELETE FROM "users";
+INSERT INTO "users" ("id", "name", "created_at", "updated_at") VALUES (309456473, 'User1001', '2020-05-20 01:40:46.126233', '2020-05-20 01:40:46.126233');
+INSERT INTO "users" ("id", "name", "created_at", "updated_at") VALUES (908005739, 'User1002', '2020-05-20 01:40:46.126233', '2020-05-20 01:40:46.126233');
+INSERT INTO "users" ("id", "name", "created_at", "updated_at") VALUES (607264868, 'User1003', '2020-05-20 01:40:46.126233', '2020-05-20 01:40:46.126233')[0m
+  [1m[35m (1091.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mPRAGMA defer_foreign_keys = 0[0m
+  [1m[35m (0.1ms)[0m  [1m[35mPRAGMA foreign_keys = 1[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 309456473], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "User1001"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "User1001"], ["id", 309456473], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 309456473], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "User1001"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 309456473], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "User1001"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? AND "users"."id" != ? LIMIT ?[0m  [["name", "   "], ["id", 309456473], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Ms. Enoch MacGyver"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.7ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Ms. Enoch MacGyver"], ["created_at", "2020-05-20 01:40:47.274880"], ["updated_at", "2020-05-20 01:40:47.274880"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Concha Rath"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Concha Rath"], ["created_at", "2020-05-20 01:40:47.282572"], ["updated_at", "2020-05-20 01:40:47.282572"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ellyn Stehr"], ["priority", 5], ["created_at", "2020-05-20 01:40:47.283893"], ["updated_at", "2020-05-20 01:40:47.283893"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005741], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Mermaids Singing"], ["text", "Consequatur aut doloribus. Reiciendis et et. Aliquid quam voluptatem."], ["created_at", "2020-05-20 01:40:47.286674"], ["updated_at", "2020-05-20 01:40:47.286674"], ["author_id", 908005741], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "wy1fh18rs6z9v5nkyfxwhwm39n73"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:47.288247"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:47.288936"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:47.289456"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (1.1ms) [0m[32mUploaded file to key: wy1fh18rs6z9v5nkyfxwhwm39n73 (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: fb700216-f5f3-4a95-847d-0d002db56a6a) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0e2d6c0 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Create (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 908005740], ["article_id", 1], ["created_at", "2020-05-20 01:40:47.294425"], ["updated_at", "2020-05-20 01:40:47.294425"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Seth Mosciski"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Seth Mosciski"], ["created_at", "2020-05-20 01:40:47.302238"], ["updated_at", "2020-05-20 01:40:47.302238"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[36mActiveStorage::Blob Load (14.4ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mrs. Analisa Price"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mrs. Analisa Price"], ["created_at", "2020-05-20 01:40:47.308562"], ["updated_at", "2020-05-20 01:40:47.308562"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Laurence Gusikowski"], ["priority", 3], ["created_at", "2020-05-20 01:40:47.309686"], ["updated_at", "2020-05-20 01:40:47.309686"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005741], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "For a Breath I Tarry"], ["text", "Saepe dolor officiis. Quibusdam quas mollitia. Unde nesciunt sed."], ["created_at", "2020-05-20 01:40:47.311885"], ["updated_at", "2020-05-20 01:40:47.311885"], ["author_id", 908005741], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "75ap3uenrg7taiapo1adciszo5qx"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:47.313160"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:47.313856"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:47.314458"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: 75ap3uenrg7taiapo1adciszo5qx (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 4a0861e9-5f57-420f-a497-e05dda66b8a4) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc129f398 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Create (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 908005740], ["article_id", 1], ["created_at", "2020-05-20 01:40:47.317834"], ["updated_at", "2020-05-20 01:40:47.317834"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Mr. Rozella Pfannerstill"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Mr. Rozella Pfannerstill"], ["created_at", "2020-05-20 01:40:47.322627"], ["updated_at", "2020-05-20 01:40:47.322627"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Hester Tromp"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Hester Tromp"], ["created_at", "2020-05-20 01:40:47.326111"], ["updated_at", "2020-05-20 01:40:47.326111"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dr. Sari Kuvalis"], ["priority", 10], ["created_at", "2020-05-20 01:40:47.327313"], ["updated_at", "2020-05-20 01:40:47.327313"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005741], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Bury My Heart at Wounded Knee"], ["text", "Hic odit aspernatur. Ea non est. Suscipit rerum quis."], ["created_at", "2020-05-20 01:40:47.330136"], ["updated_at", "2020-05-20 01:40:47.330136"], ["author_id", 908005741], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "73lti4mbkupm40g9gjdsqqt1pr03"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:47.331965"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:47.332625"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:47.333128"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.6ms) [0m[32mUploaded file to key: 73lti4mbkupm40g9gjdsqqt1pr03 (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: c63603e4-4157-4252-998c-c2e9436ab4e9) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0d793a0 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Create (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 908005740], ["article_id", 1], ["created_at", "2020-05-20 01:40:47.336545"], ["updated_at", "2020-05-20 01:40:47.336545"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Daysi Anderson PhD"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Daysi Anderson PhD"], ["created_at", "2020-05-20 01:40:47.342106"], ["updated_at", "2020-05-20 01:40:47.342106"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "Andrea Abernathy"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Andrea Abernathy"], ["created_at", "2020-05-20 01:40:47.345554"], ["updated_at", "2020-05-20 01:40:47.345554"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Zula Kiehn DDS"], ["priority", 8], ["created_at", "2020-05-20 01:40:47.346746"], ["updated_at", "2020-05-20 01:40:47.346746"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005741], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.1ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "The Violent Bear It Away"], ["text", "Deserunt quo deleniti. Aliquid necessitatibus quidem. Deleniti voluptatem temporibus."], ["created_at", "2020-05-20 01:40:47.349471"], ["updated_at", "2020-05-20 01:40:47.349471"], ["author_id", 908005741], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "x69y0tzw74voe72kubyqxm040uem"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:47.351028"]]
+  [1m[36mActiveStorage::Attachment Create (0.2ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:47.354498"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:47.355363"], ["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (4.8ms) [0m[32mUploaded file to key: x69y0tzw74voe72kubyqxm040uem (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 5ab83b19-d2b4-47b9-a69c-93502690f860) to Async(active_storage_analysis) with arguments: #<GlobalID:0x00007fad5008ba60 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mVote Create (0.1ms)[0m  [1m[32mINSERT INTO "votes" ("user_id", "article_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["user_id", 908005740], ["article_id", 1], ["created_at", "2020-05-20 01:40:47.364890"], ["updated_at", "2020-05-20 01:40:47.364890"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Create (0.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "testing"], ["priority", 2], ["created_at", "2020-05-20 01:40:47.380194"], ["updated_at", "2020-05-20 01:40:47.380194"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+Discarded ActiveStorage::AnalyzeJob due to a ActiveRecord::RecordNotFound.
+Started GET "/" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.1ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 2.6ms | Allocations: 1712)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 59ms (Views: 53.7ms | ActiveRecord: 0.4ms | Allocations: 30404)
+Started GET "/users/new" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by UsersController#new as HTML
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 1.5ms | Allocations: 1092)
+  Rendered users/new.html.erb within layouts/application (Duration: 1.9ms | Allocations: 1364)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 4.9ms | ActiveRecord: 0.0ms | Allocations: 4485)
+Started POST "/users" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"user1003"}, "commit"=>"Create Account"}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user1003"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.1ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "user1003"], ["created_at", "2020-05-20 01:40:47.468705"], ["updated_at", "2020-05-20 01:40:47.468705"]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 2ms (ActiveRecord: 0.3ms | Allocations: 1081)
+Started GET "/" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendering articles/index.html.erb within layouts/application
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."category_id" = ?[0m  [["category_id", 1]]
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.4ms | Allocations: 246)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 5ms (Views: 3.0ms | ActiveRecord: 0.2ms | Allocations: 3282)
+Started GET "/articles/new" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by ArticlesController#new as HTML
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  Rendering articles/new.html.erb within layouts/application
+  [1m[36mCACHE Category Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  Rendered articles/_form.html.erb (Duration: 2.3ms | Allocations: 1684)
+  Rendered articles/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 1945)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms | Allocations: 4652)
+Started POST "/articles" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by ArticlesController#create as HTML
+  Parameters: {"article"=>{"title"=>"E3 Conference", "text"=>"California best state to live", "image"=>#<ActionDispatch::Http::UploadedFile:0x000055abc1875290 @tempfile=#<Tempfile:/tmp/RackMultipart20200519-6961-1kmcjnx.jpg>, @original_filename="cat.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"article[image]\"; filename=\"cat.jpg\"\r\nContent-Type: image/jpeg\r\nContent-Length: 32246\r\n">, "category_id"=>"1"}, "commit"=>"Create Article"}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mCategory Load (0.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mArticle Create (0.2ms)[0m  [1m[32mINSERT INTO "articles" ("title", "text", "created_at", "updated_at", "author_id", "category_id") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "E3 Conference"], ["text", "California best state to live"], ["created_at", "2020-05-20 01:40:47.502179"], ["updated_at", "2020-05-20 01:40:47.502179"], ["author_id", 908005740], ["category_id", 1]]
+  [1m[36mActiveStorage::Attachment Load (0.1ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+  [1m[36mActiveStorage::Blob Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_blobs" ("key", "filename", "content_type", "metadata", "byte_size", "checksum", "created_at") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["key", "8rv5s93fkiclml97rdssdbd81q6b"], ["filename", "cat.jpg"], ["content_type", "image/jpeg"], ["metadata", "{\"identified\":true}"], ["byte_size", 32246], ["checksum", "jMCyv7PWnjwgjLu3II8Yyg=="], ["created_at", "2020-05-20 01:40:47.504090"]]
+  [1m[36mActiveStorage::Attachment Create (0.1ms)[0m  [1m[32mINSERT INTO "active_storage_attachments" ("name", "record_type", "record_id", "blob_id", "created_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "image"], ["record_type", "Article"], ["record_id", 1], ["blob_id", 1], ["created_at", "2020-05-20 01:40:47.504736"]]
+  [1m[36mArticle Update (0.1ms)[0m  [1m[33mUPDATE "articles" SET "updated_at" = ? WHERE "articles"."id" = ?[0m  [["updated_at", "2020-05-20 01:40:47.505233"], ["id", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[36m  Disk Storage (0.4ms) [0m[32mUploaded file to key: 8rv5s93fkiclml97rdssdbd81q6b (checksum: jMCyv7PWnjwgjLu3II8Yyg==)[0m
+[ActiveJob] Enqueued ActiveStorage::AnalyzeJob (Job ID: 84aa5bfe-95e1-4c41-8cad-4e38769e7e44) to Async(active_storage_analysis) with arguments: #<GlobalID:0x000055abc0930cf8 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+Redirected to http://www.example.com/articles/1
+Completed 302 Found in 10ms (ActiveRecord: 0.7ms | Allocations: 4004)
+Started GET "/articles/1" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+  [1m[36mActiveStorage::Blob Load (0.1ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [84aa5bfe-95e1-4c41-8cad-4e38769e7e44] Performing ActiveStorage::AnalyzeJob (Job ID: 84aa5bfe-95e1-4c41-8cad-4e38769e7e44) from Async(active_storage_analysis) enqueued at 2020-05-20T01:40:47Z with arguments: #<GlobalID:0x00007fad4c0503d8 @uri=#<URI::GID gid://lifestyle/ActiveStorage::Blob/1>>
+Processing by ArticlesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [84aa5bfe-95e1-4c41-8cad-4e38769e7e44] [36m  Disk Storage (1.3ms) [0m[34mDownloaded file from key: 8rv5s93fkiclml97rdssdbd81q6b[0m
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles" WHERE "articles"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering articles/show.html.erb within layouts/application
+  [1m[36mActiveStorage::Attachment Load (0.0ms)[0m  [1m[34mSELECT "active_storage_attachments".* FROM "active_storage_attachments" WHERE "active_storage_attachments"."record_id" = ? AND "active_storage_attachments"."record_type" = ? AND "active_storage_attachments"."name" = ? LIMIT ?[0m  [["record_id", 1], ["record_type", "Article"], ["name", "image"], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [84aa5bfe-95e1-4c41-8cad-4e38769e7e44] Skipping image analysis because the mini_magick gem isn't installed
+  [1m[36mActiveStorage::Blob Load (0.0ms)[0m  [1m[34mSELECT "active_storage_blobs".* FROM "active_storage_blobs" WHERE "active_storage_blobs"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [84aa5bfe-95e1-4c41-8cad-4e38769e7e44]   [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [84aa5bfe-95e1-4c41-8cad-4e38769e7e44]   [1m[36mActiveStorage::Blob Update (0.1ms)[0m  [1m[33mUPDATE "active_storage_blobs" SET "metadata" = ? WHERE "active_storage_blobs"."id" = ?[0m  [["metadata", "{\"identified\":true,\"analyzed\":true}"], ["id", 1]]
+[ActiveJob] [ActiveStorage::AnalyzeJob] [84aa5bfe-95e1-4c41-8cad-4e38769e7e44]   [1m[35m (0.0ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+[ActiveJob] [ActiveStorage::AnalyzeJob] [84aa5bfe-95e1-4c41-8cad-4e38769e7e44] Performed ActiveStorage::AnalyzeJob (Job ID: 84aa5bfe-95e1-4c41-8cad-4e38769e7e44) from Async(active_storage_analysis) in 7.84ms
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  Rendered articles/show.html.erb within layouts/application (Duration: 5.4ms | Allocations: 2661)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 10ms (Views: 7.9ms | ActiveRecord: 0.2ms | Allocations: 5616)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.2ms)[0m  [1m[31mrollback transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+Started GET "/" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by ArticlesController#index as HTML
+  [1m[35m (0.1ms)[0m  [1m[35mSAVEPOINT active_record_1[0m
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.0ms | Allocations: 18)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.2ms | Allocations: 2927)
+Started GET "/users/new" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by UsersController#new as HTML
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (Duration: 0.6ms | Allocations: 379)
+  Rendered users/new.html.erb within layouts/application (Duration: 0.8ms | Allocations: 426)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.0ms | Allocations: 2914)
+Started POST "/users" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by UsersController#create as HTML
+  Parameters: {"user"=>{"name"=>"user1003"}, "commit"=>"Create Account"}
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT ?[0m  [["LIMIT", 1]]
+  [1m[35m (0.0ms)[0m  [1m[35mSAVEPOINT active_record_2[0m
+  [1m[36mUser Exists? (0.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."name" = ? LIMIT ?[0m  [["name", "user1003"], ["LIMIT", 1]]
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "user1003"], ["created_at", "2020-05-20 01:40:47.555831"], ["updated_at", "2020-05-20 01:40:47.555831"]]
+  [1m[35m (0.1ms)[0m  [1m[35mRELEASE SAVEPOINT active_record_2[0m
+Redirected to http://www.example.com/
+Completed 302 Found in 3ms (ActiveRecord: 0.4ms | Allocations: 1071)
+Started GET "/" for 127.0.0.1 at 2020-05-19 20:40:47 -0500
+Processing by ArticlesController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 908005740], ["LIMIT", 1]]
+  [1m[36mArticle Load (0.0ms)[0m  [1m[34mSELECT "articles".* FROM "articles"[0m
+  Rendering articles/index.html.erb within layouts/application
+  Rendered articles/index.html.erb within layouts/application (Duration: 0.1ms | Allocations: 20)
+[Webpacker] Everything's up-to-date. Nothing to do
+Completed 200 OK in 4ms (Views: 2.9ms | ActiveRecord: 0.1ms | Allocations: 2936)
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK TO SAVEPOINT active_record_1[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
