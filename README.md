@@ -29,7 +29,7 @@
 ![image](https://i.imgur.com/ZNoE4tj.png)
 
 ## Extra feature
-You can click on your profile once you have an account, and access to a list of all the articles that you previously liked.
+You can click on your profile once you have an account, and access to a list of all the articles that you have previously liked.
 
 ![image](https://i.imgur.com/basariC.png)
 
