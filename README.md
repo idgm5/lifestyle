@@ -2,7 +2,7 @@
 
 > This a captsone project for the Microverse Program, all the requirements and design concepts are included.
 
-![screenshot](https://i.imgur.com/ot4c6iT.png)
+![screenshot](https://i.imgur.com/rDtZxvw.png)
 
 ## Built With
 
