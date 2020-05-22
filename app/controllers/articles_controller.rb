@@ -12,8 +12,7 @@ class ArticlesController < ApplicationController
               User.first
             end
 
-    #  @main_article = @articles.sort_by { |article| article.votes.count }.reverse
-    @main_article = @articles.order('votes_count DESC')
+     @main_article = @articles.order('votes_count DESC')
   end
 
   # GET /articles/1
