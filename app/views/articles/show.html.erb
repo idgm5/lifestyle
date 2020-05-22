@@ -1,23 +1,26 @@
 <p id="notice"><%= notice %></p>
 
+<article class="article-container">
+
   <%= image_tag(@article.image) if @article.image.attached? %>
 
-<p>
-  <strong>Author:</strong>
-  <%= @article.author.name %>
-</p>
+  <p>
+    <strong>Author:</strong>
+    <%= @article.author.name %>
+  </p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @article.title %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+  </p>
 
-<p>
-  <strong>Text:</strong>
-  <%= simple_format(@article.text) %>
-</p>
+  <p>
+    <strong>Text:</strong>
+    <%= simple_format(@article.text) %>
+  </p>
 
-<p>
-  <strong>Category:</strong>
-  <%= @article.category.name %>
-</p>
+  <p>
+    <strong>Category:</strong>
+    <%= @article.category.name %>
+  </p>
+</article>

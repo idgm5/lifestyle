@@ -88,7 +88,7 @@
 .articles-frontpage,
 .articles-column  {
   display: flex;
-  height: 15rem;
+  height: 20rem;
 }
 
 .articles-column {
@@ -98,7 +98,7 @@
 
 .articles-frontpage,
 .articles-column {
-  height: 25rem;
+  height: 100%;
 }
 
 .articles-row > div,
@@ -196,6 +196,7 @@
 
 .articles-category {
   margin-top: 1.5rem;
+  height: 100vh;
 }
 
 .articles-category > div > div {
@@ -227,6 +228,19 @@
 .category-article-content h3 {
   color: yellow;
   text-decoration: underline;
+}
+
+.form-container {
+  height: 100vh;
+}
+
+.article-container {
+  height: 100vh;
+}
+
+.article-container > img {
+  width: 30rem;
+  object-fit: cover;
 }
 
 footer {
