@@ -4,7 +4,7 @@ class ArticlesController < ApplicationController
   def index
     @articles = Article.all
 
-    @categories = Category.all.sort_by(&:priority).reverse
+    @categories = Category.all.sort_by(&:priority).reverse.first(4)
 
     @user = if session[:current_user_id].is_a? Integer
               User.find(session[:current_user_id])
