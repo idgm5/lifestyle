@@ -1,5 +1,4 @@
 class VotesController < ApplicationController
-
   def create
     @article = Article.find(params[:article_id])
     @vote = @article.votes.build(vote_params)
@@ -27,7 +26,8 @@ class VotesController < ApplicationController
   end
 
   private
-    def vote_params
-      params.permit(:user_id, :article_id)
-    end
+
+  def vote_params
+    params.permit(:user_id, :article_id)
+  end
 end
