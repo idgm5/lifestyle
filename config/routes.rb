@@ -1,8 +1,8 @@
 Rails.application.routes.draw do
-  put '/vote/' => 'articles#vote'
-  put '/unvote/' => 'articles#unvote'
+  put '/vote/' => 'categories#vote'
+  put '/unvote/' => 'categories#unvote'
 
-  get 'collection', action: :collection, controller: 'articles'
+  get 'collection', action: :collection, controller: 'categories'
 
   get 'sign_in', action: :sign_in, controller: 'users'
   post 'login', action: :login, controller: 'users'

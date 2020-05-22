@@ -17,46 +17,9 @@ class ArticlesController < ApplicationController
     @third_article = @articles.sort_by { |article| article.votes.count }.reverse.third
   end
 
-  def vote
-    @vote = Vote.new(vote_params)
-
-    if @vote.save
-      flash[:notice] = 'You liked this article!'
-      redirect_to "/collection?id=#{@vote.article.id}"
-    else
-      flash[:notice] = @vote.errors.full_messages
-      redirect_to root_path
-    end
-  end
-
-  def unvote
-    @vote = Vote.find_by(user_id: params[:user_id], article_id: params[:article_id])
-    @prev_vote = params[:article_id]
-
-    if @vote.destroy
-      flash[:notice] = 'You disliked this article!'
-      redirect_to "/collection?id=#{@prev_vote}"
-    else
-      flash[:notice] = @vote.errors.full_messages
-      redirect_to root_path
-    end
-  end
-
   # GET /articles/1
   # GET /articles/1.json
   def show; end
-
-  def collection
-    @article = Article.find(params[:id])
-
-    @collection = Article.where(category_id: @article.category_id)
-
-    @user = if session[:current_user_id].is_a? Integer
-              User.find(session[:current_user_id])
-            else
-              User.first
-            end
-  end
 
   def new
     @article = Article.new
@@ -108,9 +71,5 @@ class ArticlesController < ApplicationController
 
   def article_params
     params.require(:article).permit(:title, :text, :image, :category_id)
-  end
-
-  def vote_params
-    params.permit(:user_id, :article_id)
   end
 end
