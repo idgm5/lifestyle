@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-  put '/vote/' => 'categories#vote'
-  put '/unvote/' => 'categories#unvote'
+  put '/vote/' => 'votes#create'
+  put '/unvote/' => 'votes#destroy'
 
   get 'collection', action: :collection, controller: 'categories'
 

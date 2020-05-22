@@ -3,26 +3,26 @@
   <section class="articles-frontpage">
     <div class="frontpage">
       <% if @main_article.present? %>
-      <%= link_to ' ', @main_article, class: 'click-image'%>
-      <%= image_tag(@main_article.image, class:"article-image") %>
-      <h3 class="text"><%= @main_article.title%></h3>
-      <p class="text"><%= @main_article.text%></p>
+      <%= link_to ' ', @main_article.first, class: 'click-image'%>
+      <%= image_tag(@main_article.first.image, class:"article-image") %>
+      <h3 class="text"><%= @main_article.first.title%></h3>
+      <p class="text"><%= @main_article.first.text%></p>
       <% end %>
     </div>
     <div class="articles-column">
       <div>
-        <% if @second_article.present? %>
-        <%= link_to ' ', @second_article, class: 'click-image'%>
-        <%= image_tag(@second_article.image, class:"article-image") %>
-        <h3><%= @second_article.title%></h3>
+        <% if @main_article.second.present? %>
+        <%= link_to ' ', @main_article.second, class: 'click-image'%>
+        <%= image_tag(@main_article.second.image, class:"article-image") %>
+        <h3><%= @main_article.second.title%></h3>
         <% end %>
       </div>
 
       <div>
-        <% if @third_article.present? %>
-        <%= link_to ' ', @third_article, class: 'click-image'%>
-        <%= image_tag(@third_article.image, class:"article-image") %>
-        <h3><%= @third_article.title%></h3>
+        <% if @main_article.third.present? %>
+        <%= link_to ' ', @main_article.third, class: 'click-image'%>
+        <%= image_tag(@main_article.third.image, class:"article-image") %>
+        <h3><%= @main_article.third.title%></h3>
         <% end %>
       </div>
     </div>
