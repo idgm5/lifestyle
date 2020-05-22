@@ -1,5 +1,4 @@
 class CategoriesController < ApplicationController
-
   def index
     @categories = Category.all
   end
@@ -34,8 +33,7 @@ class CategoriesController < ApplicationController
     end
   end
 
-  def show
-  end
+  def show; end
 
   def destroy
     @category.destroy
