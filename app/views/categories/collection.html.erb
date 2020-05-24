@@ -13,7 +13,7 @@
             <% if collection.votes.find_by(user_id: @user).present? %>
               <h3><%= link_to 'Dislike', unvote_path(user_id: @user, article_id: collection), method: :put %></h3>
             <% else %>
-              <h3><%= link_to 'Like', vote_path(user_id: @user, article_id: collection), method: :put %></h3>
+              <h3><%= link_to 'Vote', vote_path(user_id: @user, article_id: collection), method: :put %></h3>
             <% end %>
           <% end %>
            <h3><%= link_to 'Read more', collection %></h3>
