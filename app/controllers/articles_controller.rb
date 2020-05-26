@@ -12,7 +12,7 @@ class ArticlesController < ApplicationController
               User.first
             end
 
-     @main_article = @articles.order('votes_count DESC')
+    @main_article = @articles.order('votes_count DESC')
   end
 
   # GET /articles/1
