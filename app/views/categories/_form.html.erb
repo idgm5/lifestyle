@@ -1,0 +1,30 @@
+<%= form_with(model: category, local: true) do |form| %>
+  <% if category.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being saved:</h2>
+
+      <ul>
+        <% category.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="form-container">
+    <div class="form-style-2">
+    <div class="form-style-2-heading">Categories are sorted in frontpage based on priority.</div>
+      <div class="field">
+        <%= form.text_field :name, placeholder: 'Write a name for the cateogry', class:'input-field' %>
+      </div>
+
+      <div class="field">
+        <%= form.number_field :priority, placeholder: 'Number of priority' %>
+      </div>
+
+      <div class="actions">
+        <%= form.submit %>
+      </div>
+    </div>
+  </div>
+<% end %>

@@ -1,0 +1,305 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.main-container {
+  width: 1300px;
+  background-color: white;
+  z-index: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 0 1rem;
+}
+
+.navbar > div:first-child  a {
+  text-decoration: none;
+  color: black
+}
+
+.navbar > div:first-child  a:hover {
+  background-color: white;
+  text-decoration: none;
+}
+
+.navbar > div ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+.navbar > div ul > li {
+  margin: 0 1rem;
+  text-transform: uppercase;
+}
+
+.navbar > div ul > li a {
+  text-decoration: none;
+  color: gray;
+  font-weight: bold;
+}
+
+.navbar-selected {
+  color: red !important;
+}
+
+.navbar-login {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-login > div {
+  margin: 0 1rem;
+}
+
+.navbar-login > div:last-child {
+  margin: 0;
+}
+
+.fa-search {
+  font-size: 1.2rem;
+  color: gray;
+}
+
+.articles-row,
+.articles-frontpage,
+.articles-column  {
+  display: flex;
+}
+
+.articles-column {
+  width: 25%;
+  flex-direction: column;
+}
+
+.articles-frontpage {
+  width: 100%;
+  height: 65vh;
+}
+
+.articles-row > div,
+.frontpage,
+.articles-column > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25%;
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.4));
+}
+
+.frontpage {
+  border-top: 0.3rem solid darkslategray;
+}
+
+.frontpage,
+.articles-column > div {
+  width: 100%;
+}
+
+.articles-column > div {
+  height: 50%;
+}
+
+.articles-row > div > img,
+.frontpage > img,
+.articles-column > div > img {
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.click-image {
+  display: block;
+  position: absolute;
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  background: transparent;
+}
+
+.text {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+
+.click-image:hover {
+  background-color: transparent;
+  text-decoration: none;
+}
+
+.articles-row > div > h3,
+.articles-row > div > p,
+.frontpage > h3,
+.frontpage > p,
+.articles-column > div > h3,
+.articles-column > div > p {
+  z-index: 1;
+  position: absolute;
+  color: white;
+  margin-left: 0.5rem;
+}
+
+.articles-row > div > h3 {
+  border-bottom: solid yellow;
+}
+.articles-row > div > p {
+  bottom: 0;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.articles-row {
+  height: 35vh;
+}
+.frontpage > h3,
+.frontpage > p,
+.articles-column > div > h3,
+.articles-column > div > p {
+  font-weight: bold;
+  font-size: 1rem;
+  bottom: 0;
+}
+
+.frontpage > h3,
+.articles-column > div > h3 {
+  color: orange;
+}
+
+.frontpage > h3 {
+  bottom: 4rem;
+}
+
+.articles-category {
+  margin-top: 1.5rem;
+  height: 100vh;
+}
+
+.articles-category > div > div {
+  width: 50%;
+  height: 15rem;
+  display: flex;
+  float: left;
+  margin-top: 1.5rem;
+}
+
+.articles-category > div > div > img {
+  width: 50%;
+  object-fit: cover;
+}
+
+.category-article-content {
+  font-size: 15px;
+  width: 50%;
+}
+
+.category-article-content h3, h2, p {
+  margin-left: 0.5rem;
+}
+
+.category-article-content h3, h2 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.category-article-content h3 {
+  color: yellow;
+  text-decoration: underline;
+}
+
+.form-container {
+  height: 100vh;
+}
+
+.article-container {
+  height: 100vh;
+}
+
+.article-container > img {
+  width: 30rem;
+  object-fit: cover;
+}
+
+footer {
+  display: flex;
+  background-color: #4e443f;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  height: 4rem;
+}
+
+.footer-logo > h1 > a{
+  color: white;
+  text-decoration: none;
+}
+
+.footer-terms > ul {
+  list-style: none;
+  display: inline-flex;
+}
+
+.footer-terms > ul > li {
+  margin: 0 1rem;
+}
+
+.footer-terms > ul > li > a {
+  color: orange;
+  font-weight: bold;
+}
+
+.copyrights-text {
+  color: white !important;
+}
+
+.footer-social {
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.footer-social > div {
+  display: flex;
+  padding: 0 0.5rem;
+}
+
+.footer-social > div > a > i {
+  padding: 0 0.2rem;
+  font-size: 1.5rem;
+  color: red;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.frontpage {
+  width: 75%;
+}

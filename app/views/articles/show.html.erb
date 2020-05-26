@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<article class="article-container">
+
+  <%= image_tag(@article.image) if @article.image.attached? %>
+
+  <p>
+    <strong>Author:</strong>
+    <%= @article.author.name %>
+  </p>
+
+  <p>
+    <strong>Title:</strong>
+    <%= @article.title %>
+  </p>
+
+  <p>
+    <strong>Text:</strong>
+    <%= simple_format(@article.text) %>
+  </p>
+
+  <p>
+    <strong>Category:</strong>
+    <%= @article.category.name %>
+  </p>
+
+  <% if session[:current_user_id] == @article.author.id %>
+  <p><%= link_to 'Edit Article', edit_article_path(@article) %></p>
+  <% end %>
+</article>

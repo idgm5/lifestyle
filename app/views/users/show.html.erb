@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<div class="form-container">
+  <% if session[:current_user_id].is_a? Integer %>
+    <% if session[:current_user_id] = @user.id %>
+      <h3> All your liked articles </h3>
+    <% else %>
+      <h3> Liked articles by <%= @user.name %> </h3>
+    <% end %>
+  <% else %>
+      <h3> Liked articles by <%= @user.name %> </h3>
+  <% end %>
+  <div class="articles-category">
+    <div>
+      <% @collections.each do |collection| %>
+        <div>
+          <%= image_tag(collection.article.image, class:"article-image") %>
+          <div class="category-article-content">
+            <h3><%= simple_format(collection.article.category.name) %></h3>
+            <h2><%= collection.article.title %></h2>
+            <h2>Author:
+              <%= collection.article.author.name %></h2>
+            <p class="text"><%= collection.article.text %></p>
+          </div>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

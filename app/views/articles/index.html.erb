@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+  <section class="articles-frontpage">
+    <div class="frontpage">
+      <% if @main_article.present? %>
+      <%= link_to ' ', @main_article.first, class: 'click-image'%>
+      <%= image_tag(@main_article.first.image, class:"article-image") %>
+      <h3 class="text"><%= @main_article.first.title%></h3>
+      <p class="text"><%= @main_article.first.text%></p>
+      <% end %>
+    </div>
+    <div class="articles-column">
+      <div>
+        <% if @main_article.second.present? %>
+        <%= link_to ' ', @main_article.second, class: 'click-image'%>
+        <%= image_tag(@main_article.second.image, class:"article-image") %>
+        <h3><%= @main_article.second.title%></h3>
+        <% end %>
+      </div>
+
+      <div>
+        <% if @main_article.third.present? %>
+        <%= link_to ' ', @main_article.third, class: 'click-image'%>
+        <%= image_tag(@main_article.third.image, class:"article-image") %>
+        <h3><%= @main_article.third.title%></h3>
+        <% end %>
+      </div>
+    </div>
+  </section>
+  <section class="articles-row">
+    <% @categories.each do |category| %>
+      <div>
+        <% if category.articles.sort_by(&:created_at).last.present? %>
+          <%= link_to ' ', collection_path(id: category.articles.sort_by(&:created_at).last), class: 'click-image'%>
+          <%= image_tag(category.articles.sort_by(&:created_at).last.image, class:"article-image") %>
+          <h3><%= category.articles.sort_by(&:created_at).last.category.name%></h3>
+          <p><%= category.articles.sort_by(&:created_at).last.title%></p>
+        <% end %>
+      </div>
+    <% end %>
+  </section>
